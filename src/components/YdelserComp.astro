@@ -1,0 +1,35 @@
+---
+const { heading } = Astro.props;
+---
+
+<article>
+  <div>
+    <h2>{heading}</h2>
+    <div class="line"></div>
+    <slot />
+  </div>
+</article>
+
+<style>
+  h2 {
+    position: relative;
+    margin-bottom: var(--spacing_3);
+  }
+
+  h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px; /* Tykkelse af stregen */
+    background-color: brown;
+    position: absolute;
+    left: 0;
+    bottom: -0.5cm; /* Placerer stregen 0,5 cm under overskriften */
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing_8);
+  }
+</style>
