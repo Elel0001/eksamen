@@ -3,7 +3,7 @@ import MainLayout from "../layout/MainLayout.astro";
 
 import Hero from "../components/Hero.astro";
 import OverskriftWithUnderline from "../components/OverskriftWithUnderline.astro";
-// import ForsideBox from "../components/Forside_boksBackup.astro";
+import Button from "../components/Button.astro";
 import ForsideBox from "../components/ForsideBox.astro";
 ---
 
@@ -33,6 +33,10 @@ import ForsideBox from "../components/ForsideBox.astro";
     weekendTimes="Lukket"
   />
 </div>
+
+<Button size="small">Book en aftale</Button>
+<Button size="medium">TEXT2</Button>
+<Button size="large">TEXT3</Button>
 
 <style>
   @media (min-width: 800px) {

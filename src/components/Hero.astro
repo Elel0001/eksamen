@@ -1,13 +1,15 @@
 ---
 import "../styles/general.css";
+
+import Button from "../components/Button.astro";
 ---
 
 <div class="hero">
   <img src="img/hero_with_gradient.jpg" alt="Hero Image" />
   <div class="title-container">
-    <div class="title">Anno 1975</div>
-    <div class="title_to">Guldsmed i Grønnegade</div>
-    <button class="button_hero">Buttonnn</button>
+    <div class="title h4">Anno 1975</div>
+    <div class="title_to h3">Guldsmed i Grønnegade</div>
+    <div class="hero_button"><Button size="small">Book en aftale</Button></div>
   </div>
 </div>
 
@@ -19,6 +21,7 @@ import "../styles/general.css";
     display: grid;
     grid-template-columns: 1fr 0.1fr 0.1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    margin: 0;
   }
 
   .hero img {
@@ -27,6 +30,7 @@ import "../styles/general.css";
     object-fit: cover;
     grid-column: 1/4;
     grid-row: 1/4;
+    margin: 0;
   }
 
   .title-container {
@@ -36,6 +40,7 @@ import "../styles/general.css";
     grid-row: 2 / span 1;
     display: grid;
     padding-left: 5%;
+    margin: 0;
   }
 
   .title {
@@ -46,8 +51,9 @@ import "../styles/general.css";
     color: var(--primary_background);
   }
 
-  .button_hero {
-    margin-top: 3%;
+  .hero_button {
+    padding-top: 2%;
+    margin: 0;
   }
 
   @media screen and (min-width: 800px) {
@@ -59,15 +65,15 @@ import "../styles/general.css";
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
+      margin: 0;
     }
 
     .title-container {
-      text-align: center;
       z-index: 1;
       grid-column: 1 / span 1;
       grid-row: 2 / span 1;
       display: grid;
-      place-items: center;
+      margin: 0;
     }
 
     .title {
@@ -80,18 +86,23 @@ import "../styles/general.css";
       height: 70vh;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1.5fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
       padding-top: 2%;
+      margin: 0;
+    }
+
+    .hero img {
+      margin: 0;
     }
 
     .title-container {
-      text-align: center;
       z-index: 1;
       grid-column: 1 / span 1;
       grid-row: 2 / span 1;
       display: grid;
-      place-items: center;
+      padding-left: 5%;
+      margin: 0;
     }
   }
 </style>
