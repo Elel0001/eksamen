@@ -1,9 +1,11 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
+import OverskriftWithUnderline from "../components/OverskriftWithUnderline.astro";
 import YdelserComp from "../components/YdelserComp.astro";
 ---
 
 <MainLayout>
+  <OverskriftWithUnderline overskrift="Ydelser" />
   <section>
     <div class="text">
       <YdelserComp heading="Bestillinger">
@@ -41,6 +43,7 @@ import YdelserComp from "../components/YdelserComp.astro";
   .pic2 {
     display: none;
   }
+
   @media (min-width: 800px) {
     section {
       padding-top: var(--spacing_11);
