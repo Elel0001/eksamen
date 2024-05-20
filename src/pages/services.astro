@@ -33,22 +33,32 @@ import YdelserComp from "../components/YdelserComp.astro";
 <style>
   img {
     max-width: 480px;
-    height: 320px;
+  }
+  .text {
+    max-width: 72ch;
+  }
+  .pic1,
+  .pic2 {
+    display: none;
   }
   @media (min-width: 800px) {
     section {
       padding-top: var(--spacing_11);
       display: grid;
       grid-template-columns: 1.5fr 1fr;
-    }
-
-    .text {
-      max-width: 72ch;
-      margin-left: var(--spacing_12);
+      margin: 0 8%;
+      gap: var(--spacing_10);
     }
 
     .picture {
-      display: grid;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing_6);
+    }
+
+    .pic1,
+    .pic2 {
+      display: block;
     }
   }
 </style>
