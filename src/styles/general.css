@@ -43,59 +43,59 @@ img {
 
 /************* TEKST STYLING *************/
 
-h1 {
+.h1 {
   font-size: 2.75rem;
   font-family: var(--font_ver);
   color: var(--secondary_tekst);
 }
 
-h2 {
+.h2 {
   font-size: 2rem;
   font-family: var(--font_ver);
   color: var(--secondary_tekst);
 }
 
-h3 {
+.h3 {
   font-size: 1.75rem;
   font-family: var(--font_ver);
   color: var(--secondary_tekst);
 }
 
-h4 {
+.h4 {
   font-size: 1.5rem;
   font-family: var(--font_ver);
   color: var(--secondary_tekst);
 }
 
-h5 {
+.h5 {
   font-size: 1.25rem;
   font-family: var(--font_ver);
   color: var(--secondary_tekst);
 }
 
-p {
+.p {
   font-size: 1.5rem;
   font-family: var(--font_geo);
   color: var(--secondary_tekst);
 }
 
 @media (min-width: 800px) {
-  h1 {
+  .h1 {
     font-size: 1.6rem;
   }
-  h2 {
+  .h2 {
     font-size: 1.3rem;
   }
-  h3 {
+  .h3 {
     font-size: 1.25rem;
   }
-  h4 {
+  .h4 {
     font-size: 1.1rem;
   }
-  h5 {
+  .h5 {
     font-size: 0.75rem;
   }
-  p {
+  .p {
     font-size: 1rem;
   }
 }

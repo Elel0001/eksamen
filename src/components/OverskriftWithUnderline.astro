@@ -1,0 +1,18 @@
+---
+const { overskrift } = Astro.props;
+---
+
+<h1 class="h1">{overskrift}</h1>
+<div>
+  <hr class="short-line" />
+</div>
+
+<style>
+  .short-line {
+    width: 15%;
+    margin: 10px;
+    border: none;
+    height: 2px;
+    background-color: var(--secondary_gold);
+  }
+</style>

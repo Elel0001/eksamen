@@ -1,5 +1,5 @@
 ---
-import "..styles/general.css";
+import "../styles/general.css";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -24,3 +24,9 @@ const { title } = Astro.props;
     <Footer />
   </body>
 </html>
+
+<style>
+  body {
+    background-color: var(--primary_background);
+  }
+</style>

@@ -1,0 +1,185 @@
+---
+import "../styles/general.css";
+---
+
+<div class="container">
+  <img src="icons/logo.svg" alt="Logo" class="logo" />
+  <label for="toggle" class="burger-menu">&#9776;</label>
+  <input type="checkbox" id="toggle" class="toggle-checkbox" />
+  <label for="toggle" class="close-menu">&#10005;</label>
+  <hr class="horizontal-line" />
+  <nav class="menu">
+    <a href="index.astro" class="menu-item">Hjem</a>
+    <span class="separator"></span>
+    <a href="katalog.astro" class="menu-item">Katalog</a>
+    <span class="separator"></span>
+    <a href="services.astro" class="menu-item">Ydelser</a>
+    <span class="separator"></span>
+    <a href="om.astro" class="menu-item">Om</a>
+    <span class="separator"></span>
+    <a href="kontakt.astro" class="menu-item">Kontakt</a>
+  </nav>
+  <div class="overlay">
+    <nav class="overlay-menu">
+      <a href="index.astro" class="menu-item">Hjem</a>
+      <a href="katalog.astro" class="menu-item">Katalog</a>
+      <a href="services.astro" class="menu-item">Ydelser</a>
+      <a href="om.astro" class="menu-item">Om</a>
+      <a href="kontakt.astro" class="menu-item">Kontakt</a>
+    </nav>
+  </div>
+</div>
+
+<style>
+  .container {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    font-family: var(--font_ver);
+    position: relative;
+    padding: 20px 0;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .horizontal-line {
+    width: 45%;
+    margin: 20px auto;
+    border: none;
+    height: 1px;
+    background-color: var(--secondary_gold);
+  }
+
+  .menu {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .menu-item {
+    text-decoration: none;
+    color: var(--secondary_tekst);
+    margin: 0 10px;
+    position: relative;
+  }
+
+  .separator {
+    display: inline-block;
+    width: 1px;
+    height: 15px;
+    background-color: var(--secondary_gold);
+    margin: 0 20px;
+  }
+
+  .menu-item:hover {
+    color: var(--secondary_gold);
+    font-weight: bold;
+  }
+
+  .burger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--secondary_gold);
+    vertical-align: middle;
+  }
+
+  .close-menu {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--secondary_gold);
+    display: none;
+    vertical-align: middle;
+    z-index: 4;
+  }
+
+  .toggle-checkbox {
+    display: none;
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary_background);
+    overflow-x: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    text-align: center;
+  }
+
+  .toggle-checkbox:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .toggle-checkbox:checked ~ .burger-menu {
+    display: none;
+  }
+
+  .toggle-checkbox:checked ~ .close-menu {
+    display: inline-block;
+
+    display: block;
+  }
+
+  .overlay-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .overlay-menu .menu-item {
+    text-decoration: none;
+    color: var(--secondary_tekst);
+    display: block;
+    margin: 10px 0;
+    font-size: 24px;
+  }
+
+  .overlay-menu .menu-item:hover {
+    color: var(--secondary_gold);
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .horizontal-line,
+    .menu {
+      display: none;
+    }
+    .burger-menu {
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .close-menu {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .logo {
+      width: 80px;
+    }
+    .toggle-checkbox:checked ~ .burger-menu {
+      display: none;
+    }
+    .toggle-checkbox:checked ~ .close-menu {
+      display: inline-block;
+    }
+  }
+  @media (min-width: 769px) {
+    .burger-menu,
+    .close-menu,
+    .overlay {
+      display: none;
+    }
+  }
+</style>
