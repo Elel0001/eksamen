@@ -1,9 +1,10 @@
 ---
+import "../styles/general.css";
 const { heading } = Astro.props;
 ---
 
 <article>
-  <h2>{heading}</h2>
+  <h2 class="h2">{heading}</h2>
   <div class="line"></div>
   <slot />
 </article>
@@ -17,18 +18,18 @@ const { heading } = Astro.props;
   h2::after {
     content: "";
     display: block;
-    width: 4rem;
+    width: 5rem;
     height: 2px; /* Tykkelse af stregen */
-    background-color: brown;
+    background-color: var(--secondary_strokes);
     position: absolute;
     left: 0;
-    bottom: -0.5cm; /* Placerer stregen 0,5 cm under overskriften */
+    bottom: -0.3cm; /* Placerer stregen 0,3 cm under overskriften */
   }
 
   article {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing_4);
+    gap: var(--spacing_2);
     padding-bottom: var(--spacing_10);
   }
 </style>
