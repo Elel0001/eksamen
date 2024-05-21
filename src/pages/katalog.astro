@@ -1,0 +1,34 @@
+---
+import CardKat from "../components/Card_kat.astro";
+import ProductFilter from "../components/ProductFilter.astro";
+import MainLayout from "../layout/MainLayout.astro";
+import "../styles/katalog.css";
+// Fetcher data fra databasen og ligger i konstanten 'data'
+const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykker", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzYnlraG5uam5oaXZ2dmJnamppIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU2Nzg3NzEsImV4cCI6MjAzMTI1NDc3MX0.sOle6ArblP4c9-jM5N5RYUlWTOaJ4okr005pwOkyil8",
+  },
+}).then((res) => res.json());
+---
+
+<MainLayout title="Katalog">
+  <div class="grid">
+    <ProductFilter />
+    <section class="product_list">
+      {data.map((prod) => <CardKat info={prod} />)}
+    </section>
+  </div>
+</MainLayout>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+  }
+  .product_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+</style>

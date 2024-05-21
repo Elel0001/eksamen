@@ -1,0 +1,21 @@
+---
+const { info } = Astro.props;
+---
+
+<article data-kat={info.tags || "hej"}>
+  <img src="/katalog/ring_post.png" alt="" />
+  <div class="productinfo">
+    <h2>{info.name}</h2>
+    <p>{info.price}kr.</p>
+  </div>
+  <a href="">Læs mere</a>
+</article>
+
+<style>
+  article {
+    text-align: center;
+  }
+  .productinfo {
+    border-bottom: 1px solid hotpink;
+  }
+</style>

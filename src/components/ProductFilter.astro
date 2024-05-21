@@ -1,0 +1,96 @@
+---
+import Accordion from "./Accordion.astro";
+---
+
+<section class="accordion_list">
+  <form>
+    <Accordion title="Type">
+      <ul>
+        <li><input name="kat" value="Ringe" id="inp_ringe" type="checkbox" /> <label for="inp_ringe">Ringe</label></li>
+        <li><input name="kat" value="Øreringe" id="inp_oereringe" type="checkbox" /> <label for="inp_oereringe">Øreringe</label></li>
+      </ul>
+    </Accordion>
+    <Accordion title="Sten">
+      <ul>
+        <li><input name="kat" value="Ametyst" id="inp_ametyst" type="checkbox" /> <label for="inp_ametyst">Ametyst</label></li>
+        <li><input name="kat" value="Månesten" id="inp_maanesten" type="checkbox" /> <label for="inp_maanesten">MÅNESTEN!!!!</label></li>
+      </ul>
+    </Accordion>
+  </form>
+</section>
+<script>
+  const form = document.querySelector("form");
+  const smykker = document.querySelectorAll("article");
+  form.addEventListener("change", (e) => {
+    const formData = new FormData(form);
+    const selected = formData.getAll("kat");
+
+    //løb igennem alle produkter
+    //hvis artiklens data tingest indeholder noget fra selected, så skal den vises
+    //ellers skal den skjules
+
+    smykker.forEach((article) => {
+      let shouldShow = false;
+      if (selected.length == 0) {
+        shouldShow = true;
+      }
+
+      selected.forEach((cat) => {
+        if (article.dataset.kat.includes(cat)) {
+          shouldShow = true;
+        }
+      });
+
+      if (shouldShow) {
+        article.classList.remove("hide");
+      } else {
+        article.classList.add("hide");
+      }
+    });
+  });
+</script>
+<style>
+  .accordion_list {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  ul {
+    list-style-type: none;
+    margin-top: 15px;
+  }
+  li {
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+  }
+  /* input {
+    accent-color: var(--secondary_tekst);
+  } */
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 1rem;
+    /* padding: 0.1rem; */
+    border: 1px solid var(--secondary_tekst);
+    border-radius: 2px;
+  }
+  input[type="checkbox"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    /* clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%); */
+    background-color: var(--secondary_tekst);
+    transform: scale(0);
+    background-color: var(--secondary_tekst);
+    transition: all 0.1s;
+  }
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+</style>
