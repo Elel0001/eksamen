@@ -33,13 +33,48 @@ import ForsideBox from "../components/ForsideBox.astro";
     weekendTimes="Lukket"
   />
 </div>
+<div class="img_container">
+  <div class="sketching">
+    <img src="img/ring_sketch.png" alt="sketch" />
+  </div>
+  <div class="ring">
+    <img src="img/ring_forside.webp" alt="ring" />
+  </div>
+  <div class="hans">
+    <img src="img/hans_forside_2.webp" alt="hans" />
+  </div>
+</div>
 
 <style>
+  .img_container {
+    padding: 3% 5%;
+  }
   @media (min-width: 800px) {
     .grid_bokses {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      margin: 2% 10%;
+      margin: 2% 5%;
+    }
+
+    .img_container {
+      display: grid;
+      grid-template-columns: 0.53fr 0.5fr 0.5fr;
+      grid-template-rows: 0.5fr 0.1fr;
+    }
+
+    .sketching {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    .ring {
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+    }
+
+    .hans {
+      grid-column: 2 / span 2;
+      grid-row: 1 / span 2;
     }
   }
 </style>
