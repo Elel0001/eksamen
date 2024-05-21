@@ -3,10 +3,30 @@ import MainLayout from "../layout/MainLayout.astro";
 import OverskriftWithUnderline from "../components/OverskriftWithUnderline.astro";
 import KontaktIcons from "../components/KontaktIcons.astro";
 import Button from "../components/Button.astro";
+import OpenHours from "../components/OpenHours.astro";
 ---
 
 <MainLayout />
 <OverskriftWithUnderline overskrift="Kontakt" />
-<KontaktIcons svgPath="/icons/kompas_desk.svg" overskrift="icon 1" info="info 1" />
-<KontaktIcons svgPath="/icons/telefon_desk.svg" overskrift="icon 2" info="info 2" />
-<KontaktIcons svgPath="/icons/telefon_deskrf.svg" overskrift="icon fe" info="infof 2" />
+<div class="container">
+  <div class="icons_cont">
+    <KontaktIcons svgPath="/icons/kompas_mobil.svg" overskrift="Adresse" info="Grønnegade 26 2.sal 1107 København Find adressen her" />
+    <KontaktIcons svgPath="/icons/telefon_mobil.svg" overskrift="Telefon" info="+45 29 47 00 23" />
+    <KontaktIcons svgPath="/icons/email_mobil.svg" overskrift="Email" info="hun10@balbonet.dk" />
+    <OpenHours svgPath="/icons/clock_mobil.svg" overskrift="Åbningstider efter aftale" monThur="Man-Tors" monThurTimes="08:00 - 16:00" fri="Fre" friTimes="08:00 - 15:00" weekend="Lør-Søn" weekendTimes="Lukket" />
+  </div>
+  <div class="img_cont"><img src="img/kontakt.jpg" alt="img" /></div>
+</div>
+
+<style>
+  .img_cont {
+    padding: 3% 5%;
+  }
+  @media screen and (min-width: 800px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 2% 10%;
+    }
+  }
+</style>

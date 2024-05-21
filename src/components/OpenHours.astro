@@ -1,0 +1,66 @@
+---
+const { monThur, monThurTimes, fri, friTimes, weekend, weekendTimes } = Astro.props;
+const { svgPath, overskrift, info } = Astro.props;
+---
+
+<div class="container">
+  <div>
+    <img src={svgPath} alt="svg" />
+  </div>
+  <div>
+    <h2 class="h3">
+      {overskrift}
+    </h2>
+    <h3 class="h4">
+      {info}
+    </h3>
+
+    <table class="openingHours p">
+      <tr>
+        <td>{monThur}</td>
+        <td>{monThurTimes}</td>
+      </tr>
+      <tr>
+        <td>{fri}</td>
+        <td>{friTimes}</td>
+      </tr>
+      <tr>
+        <td>{weekend}</td>
+        <td>{weekendTimes}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<style>
+  .container img {
+    width: 100px;
+    height: auto;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    padding-top: 5%;
+  }
+
+  .container {
+  }
+
+  table.openingHours {
+    width: 70%;
+    padding-bottom: var(--spacing_5);
+    padding-top: var(--spacing_5);
+  }
+
+  table.openingHours td:last-child {
+    text-align: right;
+  }
+
+  @media (min-width: 700px) {
+    table.openingHours {
+      font-size: 1.2rem;
+      font-family: var(--font_geo);
+    }
+  }
+</style>

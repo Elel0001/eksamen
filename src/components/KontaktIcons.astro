@@ -3,13 +3,31 @@ const { svgPath, overskrift, info } = Astro.props;
 ---
 
 <div class="container">
-  <img src={svgPath} alt="" />
   <div>
-    <div class="h4">
+    <img src={svgPath} alt="svg" />
+  </div>
+  <div>
+    <h2 class="h3 spacing">
       {overskrift}
-    </div>
-    <div class="h5">
+    </h2>
+    <h3 class="h4">
       {info}
-    </div>
+    </h3>
   </div>
 </div>
+
+<style>
+  .spacing {
+    padding-bottom: var(--spacing_3);
+  }
+  .container img {
+    width: 100px;
+    height: auto;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    padding-top: 5%;
+  }
+</style>
