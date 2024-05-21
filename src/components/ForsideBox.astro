@@ -6,11 +6,11 @@ const { monThur, monThurTimes, fri, friTimes, weekend, weekendTimes } = Astro.pr
 ---
 
 <div class="container">
-  <h3>{header}</h3>
-  <p>{introText}</p>
-  <p>{elaborationText}</p>
+  <h3 class="h2 h2_padding">{header}</h3>
+  <p class="p">{introText}</p>
+  <p class="p p_padding">{elaborationText}</p>
 
-  <table class="openingHours">
+  <table class="openingHours p">
     <tr>
       <td>{monThur}</td>
       <td>{monThurTimes}</td>
@@ -35,15 +35,24 @@ const { monThur, monThurTimes, fri, friTimes, weekend, weekendTimes } = Astro.pr
 
   table.openingHours {
     width: 50%;
+    padding-bottom: var(--spacing_5);
   }
 
   table.openingHours td:last-child {
     text-align: right;
   }
 
+  .h2_padding,
+  .p_padding {
+    padding-top: var(--spacing_1);
+    padding-bottom: var(--spacing_1);
+  }
+
   @media (min-width: 700px) {
     table.openingHours {
       width: 70%;
+      font-size: 1.2rem;
+      font-family: var(--font_geo);
     }
   }
 </style>

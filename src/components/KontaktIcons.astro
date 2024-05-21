@@ -1,0 +1,15 @@
+---
+const { svgPath, overskrift, info } = Astro.props;
+---
+
+<div class="container">
+  <img src={svgPath} alt="" />
+  <div>
+    <div class="h4">
+      {overskrift}
+    </div>
+    <div class="h5">
+      {info}
+    </div>
+  </div>
+</div>
