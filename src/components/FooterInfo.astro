@@ -1,0 +1,30 @@
+---
+const { overskrift, info } = Astro.props;
+---
+
+<div class="container">
+  <div>
+    <h2 class="h3 spacing">
+      {overskrift}
+    </h2>
+    <h3 class="h5">
+      {info}
+    </h3>
+  </div>
+</div>
+
+<style>
+  .spacing {
+    padding-bottom: var(--spacing_2);
+  }
+  .container img {
+    width: 100px;
+    height: auto;
+  }
+
+  .container {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    padding-top: var(--spacing_5);
+  }
+</style>

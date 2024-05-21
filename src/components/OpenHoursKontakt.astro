@@ -1,0 +1,79 @@
+---
+const { monThur, monThurTimes, fri, friTimes, weekend, weekendTimes } = Astro.props;
+const { overskrift, info } = Astro.props;
+---
+
+<div class="container">
+  <div>
+    <h2 class="h3">
+      {overskrift}
+    </h2>
+    <h3 class="h4">
+      {info}
+    </h3>
+
+    <table class="openingHours h5">
+      <tr>
+        <td>{monThur}</td>
+        <td>{monThurTimes}</td>
+      </tr>
+      <tr>
+        <td>{fri}</td>
+        <td>{friTimes}</td>
+      </tr>
+      <tr>
+        <td>{weekend}</td>
+        <td>{weekendTimes}</td>
+      </tr>
+    </table>
+  </div>
+</div><div class="soc_media">
+  <img src="icons/facebook_desk.svg" alt="facebook" />
+  <img src="icons/insta_desk.svg" alt="facebook" />
+</div>
+
+<style>
+  .container {
+    padding-top: 15%;
+  }
+
+  table.openingHours {
+    width: 50%;
+    padding-top: var(--spacing_2);
+  }
+
+  table.openingHours td:last-child {
+    text-align: right;
+  }
+
+  .soc_media img {
+    width: 30px;
+    height: auto;
+    margin: 0;
+  }
+
+  .soc_media {
+    padding: var(--spacing_3);
+  }
+
+  @media (min-width: 700px) {
+    table.openingHours {
+      width: 55%;
+      font-size: 1rem;
+      font-family: var(--font_ver);
+    }
+
+    .container {
+      padding-top: var(--spacing_5);
+    }
+
+    .soc_media img {
+      width: 40px;
+      height: auto;
+    }
+
+    .soc_media {
+      padding: 15% 0 0 20%;
+    }
+  }
+</style>

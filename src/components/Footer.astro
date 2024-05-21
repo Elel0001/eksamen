@@ -1,0 +1,62 @@
+---
+import FooterInfo from "../components/FooterInfo.astro";
+import OpenHoursKontakt from "../components/OpenHoursKontakt.astro";
+import Button from "../components/Button.astro";
+---
+
+<div class="footer-container">
+  <div class="logo-container">
+    <div class="line"></div>
+    <img src="/icons/logo.svg" alt="Logo" class="logo" />
+    <div class="line"></div>
+  </div>
+</div>
+<div class="grid_footer">
+  <div>
+    <FooterInfo overskrift="Adresse" info="Grønnegade 26 2.sal 1107 København" />
+    <FooterInfo overskrift="Telefon" info="+45 29 47 00 23" />
+    <FooterInfo overskrift="Email" info="hun10@balbonet.dk" />
+  </div>
+  <div>
+    <OpenHoursKontakt overskrift="Åbent efter aftale" monThur="Man-Tors" monThurTimes="08:00 - 16:00" fri="Fre" friTimes="08:00 - 15:00" weekend="Lør-Søn" weekendTimes="Lukket" />
+  </div>
+  <div>
+    <Button size="small">Book en aftale</Button>
+  </div>
+</div>
+<style>
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 3%;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--secondary_gold);
+  }
+
+  .logo {
+    margin: 0 20px;
+    height: 50px;
+    width: auto;
+  }
+
+  @media screen and (min-width: 800px) {
+    .grid_footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: center;
+      margin-left: 10%;
+    }
+  }
+</style>
