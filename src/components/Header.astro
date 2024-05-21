@@ -3,29 +3,31 @@ import "../styles/general.css";
 ---
 
 <div class="container">
-  <img src="icons/logo.svg" alt="Logo" class="logo" />
+  <a href="/">
+    <img src="icons/logo.svg" alt="Logo" class="logo" />
+  </a>
   <label for="toggle" class="burger-menu">&#9776;</label>
   <input type="checkbox" id="toggle" class="toggle-checkbox" />
   <label for="toggle" class="close-menu">&#10005;</label>
   <hr class="horizontal-line" />
   <nav class="menu">
-    <a href="index.astro" class="menu-item">Hjem</a>
+    <a href="/" class="menu-item">Hjem</a>
     <span class="separator"></span>
-    <a href="katalog.astro" class="menu-item">Katalog</a>
+    <a href="/katalog" class="menu-item">Katalog</a>
     <span class="separator"></span>
-    <a href="services.astro" class="menu-item">Ydelser</a>
+    <a href="/services" class="menu-item">Ydelser</a>
     <span class="separator"></span>
-    <a href="om.astro" class="menu-item">Om</a>
+    <a href="/om" class="menu-item">Om</a>
     <span class="separator"></span>
-    <a href="kontakt.astro" class="menu-item">Kontakt</a>
+    <a href="/kontakt" class="menu-item">Kontakt</a>
   </nav>
   <div class="overlay">
     <nav class="overlay-menu">
-      <a href="index.astro" class="menu-item">Hjem</a>
-      <a href="katalog.astro" class="menu-item">Katalog</a>
-      <a href="services.astro" class="menu-item">Ydelser</a>
-      <a href="om.astro" class="menu-item">Om</a>
-      <a href="kontakt.astro" class="menu-item">Kontakt</a>
+      <a href="/" class="menu-item">Hjem</a>
+      <a href="/katalog" class="menu-item">Katalog</a>
+      <a href="/services" class="menu-item">Ydelser</a>
+      <a href="/om" class="menu-item">Om</a>
+      <a href="/kontakt" class="menu-item">Kontakt</a>
     </nav>
   </div>
 </div>
