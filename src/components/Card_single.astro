@@ -1,0 +1,48 @@
+---
+import OverskriftWithUnderline from "../components/OverskriftWithUnderline.astro";
+const { pris, texts1, texts2, texts3, texts4, buttontext, imgsingle } = Astro.props;
+---
+
+<article>
+  <img src={imgsingle} alt="" />
+  <OverskriftWithUnderline overskrift="Lilla amatyst ring" />
+  <h2>{pris}</h2>
+  <p>{texts1}</p>
+  <p>{texts2}</p>
+  <p>{texts3}</p>
+  <p>{texts4}</p>
+
+  <div class="grid_single">
+    <div class="del">
+      <div class="del_ikon">
+        <img src="/icons/del_desk.svg" alt="Del knap" />
+      </div>
+      <p>Del</p>
+    </div>
+    <button>{buttontext}</button>
+  </div>
+
+  <style>
+    .del_ikon img {
+      width: 12%;
+    }
+
+    .del {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    p {
+      gap: var(--spacing_12);
+    }
+
+    @media (min-width: 800px) {
+      .grid_single {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+      }
+    }
+  </style>
+</article>
