@@ -9,6 +9,8 @@ const { size } = Astro.props;
     border-radius: 5px;
     background-color: var(--secondary_gold);
     border: 2px solid var(--secondary_gold);
+    color: var(--primary_background);
+    font-size: 1rem;
   }
 
   button:hover {
@@ -30,8 +32,11 @@ const { size } = Astro.props;
   }
 
   @media (min-width: 769px) {
+    button {
+      font-size: 1.3rem;
+    }
     .small {
-      padding: 5px 20px;
+      padding: 4px 28px;
     }
 
     .medium {
