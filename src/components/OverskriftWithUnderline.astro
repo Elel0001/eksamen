@@ -2,18 +2,12 @@
 const { overskrift } = Astro.props;
 ---
 
-<div class="space">
-  <h1 class="h1">{overskrift}</h1>
-  <div>
-    <hr class="short-line" />
-  </div>
+<h1 class="h1">{overskrift}</h1>
+<div class="padding">
+  <hr class="short-line" />
 </div>
 
 <style>
-  .space {
-    margin: 0 5%;
-  }
-
   .short-line {
     width: 72px;
     margin: 5px 0;
@@ -22,17 +16,20 @@ const { overskrift } = Astro.props;
     background-color: var(--secondary_strokes);
   }
 
+  .padding {
+    padding-bottom: 1.8rem;
+  }
+
+  /* h1 {
+    padding-left: 1.4rem;
+  } */
+
   @media (min-width: 700px) {
     .short-line {
       width: 100px;
-      margin: 10px 0;
       border: none;
       height: 2px;
       background-color: var(--secondary_strokes);
-    }
-
-    .space {
-      margin: 3% 7%;
     }
   }
 </style>
