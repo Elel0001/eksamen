@@ -2,10 +2,10 @@
 const { info } = Astro.props;
 ---
 
-<article data-kat={info.tags || "hej"}>
+<article data-kat={info.tags}>
   <img src="/img/produkter/ring_zoomed.jpg" alt="" />
   <div class="productinfo">
-    <h2 class="h2">{info.name}</h2>
+    <h2 class="h4">{info.name}</h2>
     <p>{info.price}kr.</p>
   </div>
   <a href="">Læs mere</a>
@@ -18,10 +18,20 @@ const { info } = Astro.props;
     padding-bottom: 1.5rem;
   }
   .productinfo {
-    border-bottom: 1px solid hotpink;
+    border-bottom: 1px solid var(--secondary_tekst);
+    margin: 0 2.5rem;
   }
 
-  .h2 {
+  .h4 {
     margin: 0;
+  }
+
+  p {
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    padding-top: 1rem;
   }
 </style>
