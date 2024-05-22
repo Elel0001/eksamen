@@ -6,7 +6,7 @@ import Button from "./Button.astro";
 <article data-kat={info.tags}>
   <img src="/img/produkter/ring_zoomed.jpg" alt="" />
   <div class="productinfo">
-    <h2 class="h3">{info.name}</h2>
+    <h2 class="h4">{info.name}</h2>
     <p>{info.price} kr.</p>
   </div>
   <div class="button"><Button size="small">Se mere</Button></div>
@@ -25,9 +25,9 @@ import Button from "./Button.astro";
     margin: 0 3rem;
   }
 
-  .h3 {
+  .h4 {
     margin: 0;
-    font-family: var(--font_geo);
+    /* font-family: var(--font_geo); */
   }
 
   p {
