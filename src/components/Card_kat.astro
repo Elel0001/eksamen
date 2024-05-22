@@ -3,9 +3,9 @@ const { info } = Astro.props;
 ---
 
 <article data-kat={info.tags || "hej"}>
-  <img src="/katalog/ring_post.png" alt="" />
+  <img src="/img/produkter/ring_zoomed.jpg" alt="" />
   <div class="productinfo">
-    <h2>{info.name}</h2>
+    <h2 class="h2">{info.name}</h2>
     <p>{info.price}kr.</p>
   </div>
   <a href="">Læs mere</a>
@@ -14,8 +14,14 @@ const { info } = Astro.props;
 <style>
   article {
     text-align: center;
+    background-color: var(--primary_felter);
+    padding-bottom: 1.5rem;
   }
   .productinfo {
     border-bottom: 1px solid hotpink;
+  }
+
+  .h2 {
+    margin: 0;
   }
 </style>
