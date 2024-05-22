@@ -27,9 +27,7 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
         <OverskriftWithUnderline overskrift="Lilla amatyst ring" />
       </div>
 
-      <div class="h5">
-        <h2>{pris}</h2>
-      </div>
+      <h2 class="h5">{pris}</h2>
 
       <p>{texts1}</p>
       <p>{texts2}</p>
@@ -55,7 +53,7 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
       width: 100%;
       height: 100%;
       display: flex;
-      justify-content: center; /* Center the image container horizontally */
+      justify-content: center;
       align-items: center;
     }
 
