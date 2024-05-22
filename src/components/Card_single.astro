@@ -7,7 +7,7 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
 ---
 
 <article>
-  <div class="container_single">
+  <!--  <div class="container_single">
     <div class="column_picture">
       <div class="carousel">
         <div class="img_single">
@@ -17,6 +17,10 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
         <button class="prev"></button>
         <button class="next"></button>
       </div>
+    </div> -->
+  <div class="test_grid">
+    <div class="container">
+      <img src={imgsingle2} alt="" />
     </div>
     <div class="column_text">
       <div class="h1">
@@ -44,37 +48,55 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
     </div>
   </div>
   <style>
-    /*Chatgpt start */
+    /*Chatgpt og hjælp fra tutor start */
     .carousel {
       position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center; /* Center the image container horizontally */
+      align-items: center;
+    }
+
+    .img_single {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+      border: 1px solid red;
+      overflow: hidden;
     }
 
     .carousel img {
-      display: none;
-      width: 100%;
-      height: auto;
-    }
-
-    .carousel img:first-child {
-      display: block;
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin: auto;
     }
 
     .carousel .prev {
-      left: 0;
+      left: 6%;
+      background-image: url("/icons/pilv.svg");
     }
 
     .carousel .next {
-      right: 0;
+      right: 0%;
+      background-image: url("/icons/pilh.svg");
     }
-    /*Chatgpt slut */
+
+    /*Chatgpt og hjælp fra tutor slut */
+
     .carousel button {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-image: url("/icons/pilv.svg");
-      color: white;
+      height: 50px;
+      width: 50px;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      object-fit: cover;
       border: none;
-      padding: 10px 20px;
       cursor: pointer;
     }
 
@@ -88,8 +110,8 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
     .del {
       display: grid;
       grid-template-columns: 1fr 10fr;
-      margin-left: -0.8rem;
-      gap: var(--spacing_3);
+      gap: var(--spacing_1);
+      margin-bottom: var(--spacing_6);
     }
 
     .del_text {
@@ -115,20 +137,39 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
         grid-template-columns: 1fr 1fr;
       }
 
-      .column_picture {
+      .container {
+        margin-right: var(--spacing_11);
+        margin-top: var(--spacing_10);
+      }
+
+      .test_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      /*.column_picture {
         grid-column: 1 / 2;
       }
 
       .column_text {
         grid-column: 2 / 3;
-      }
+      }*/
       .img_single {
         margin-top: var(--spacing_2);
         padding: var(--spacing_10);
       }
-      .prev,
-      .next {
-        padding: var(--spacing_10);
+      .carousel .prev {
+        left: 10%;
+      }
+
+      .carousel .next {
+        right: 10%;
+      }
+      /*Ret pilene til her */
+      .column_picture {
+        height: 40vh;
+        width: 35vw;
+        /*Rem bruges her istedet - se evt. var */
       }
     }
   </style>
@@ -145,26 +186,23 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
     showSlide(slideIndex);
 
     function changeSlide(n) {
-      console.log("changeSlide function");
       showSlide((slideIndex += n));
     }
 
     function showSlide(n) {
-      const slides = document.querySelectorAll<HTMLImageElement>(".carousel img");
-      console.log(slides[0]);
-      console.log(slides[1]);
-      if (n >= slides.length) {
+      const slides = document.querySelectorAll(".carousel img");
+      const totalSlides = slides.length;
+      console.log(totalSlides);
+      if (n >= totalSlides) {
         slideIndex = 0;
       }
       if (n < 0) {
-        slideIndex = slides.length - 1;
+        slideIndex = totalSlides - 1;
       }
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[slideIndex].style.display = "block";
-    }
 
+      const carouselContainer = document.querySelector(".img_single");
+      carouselContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
+    }
     /*Chat gpt slut */
   </script>
 </article>
