@@ -6,27 +6,26 @@ import Accordion from "./Accordion.astro";
   <form>
     <Accordion title="Type">
       <ul>
-        <li><input name="kat" value="Ringe" id="inp_ringe" type="checkbox" /> <label for="inp_ringe">Ringe</label></li>
-        <li><input name="kat" value="Øreringe" id="inp_oereringe" type="checkbox" /> <label for="inp_oereringe">Øreringe</label></li>
-        <li><input name="kat" value="Vedhæng" id="inp_vedhaeng" type="checkbox" /> <label for="inp_vedhaeng">Vedhæng</label></li>
         <li><input name="kat" value="Armringe" id="inp_armringe" type="checkbox" /> <label for="inp_armringe">Armringe</label></li>
         <li><input name="kat" value="Halskæde" id="inp_halskaede" type="checkbox" /> <label for="inp_halskaede">Halskæde</label></li>
+        <li><input name="kat" value="Ringe" id="inp_ringe" type="checkbox" /> <label for="inp_ringe">Ringe</label></li>
+        <li><input name="kat" value="Vedhæng" id="inp_vedhaeng" type="checkbox" /> <label for="inp_vedhaeng">Vedhæng</label></li>
       </ul>
     </Accordion>
     <Accordion title="Materiale">
       <ul>
+        <li><input name="kat" value="Forgyldt" id="inp_forgyldt" type="checkbox" /> <label for="inp_forgyldt">Forgyldt</label></li>
         <li><input name="kat" value="Guld" id="inp_guld" type="checkbox" /> <label for="inp_guld">Guld</label></li>
         <li><input name="kat" value="Sølv" id="inp_soelv" type="checkbox" /> <label for="inp_soelv">Sølv</label></li>
-        <li><input name="kat" value="Forgyldt" id="inp_forgyldt" type="checkbox" /> <label for="inp_forgyldt">Forgyldt</label></li>
       </ul>
     </Accordion>
     <Accordion title="Sten">
       <ul>
         <li><input name="kat" value="Ametyst" id="inp_ametyst" type="checkbox" /> <label for="inp_ametyst">Ametyst</label></li>
-        <li><input name="kat" value="Månesten" id="inp_maanesten" type="checkbox" /> <label for="inp_maanesten">Månesten</label></li>
-        <li><input name="kat" value="Citrin" id="inp_citrin" type="checkbox" /> <label for="inp_citrin">Citrin</label></li>
         <li><input name="kat" value="Brilliant" id="inp_brilliant" type="checkbox" /> <label for="inp_brilliant">Brilliant</label></li>
+        <li><input name="kat" value="Citrin" id="inp_citrin" type="checkbox" /> <label for="inp_citrin">Citrin</label></li>
         <li><input name="kat" value="Kvarts" id="inp_kvarts" type="checkbox" /> <label for="inp_kvarts">Kvarts</label></li>
+        <li><input name="kat" value="Månesten" id="inp_maanesten" type="checkbox" /> <label for="inp_maanesten">Månesten</label></li>
         <li><input name="kat" value="Perler" id="inp_perler" type="checkbox" /> <label for="inp_perler">Perler</label></li>
         <li><input name="kat" value="Zirkonia" id="inp_zirkonia" type="checkbox" /> <label for="inp_zirkonia">Zirkonia</label></li>
       </ul>
@@ -128,6 +127,8 @@ import Accordion from "./Accordion.astro";
       align-self: flex-start;
       margin: 0;
       margin-right: 2rem;
+      position: sticky;
+      top: 2rem;
     }
   }
 </style>
