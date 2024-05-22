@@ -2,8 +2,8 @@
 const { title } = Astro.props;
 ---
 
-<!-- Slet "open" efter details, hvis menuen skal være lukket fra start -->
-<details open class="h5">
+<!-- tilføj "open" efter details, hvis menuen skal være åben fra start -->
+<details class="h5">
   <summary><span>{title}</span></summary>
   <div><slot /></div>
 </details>
