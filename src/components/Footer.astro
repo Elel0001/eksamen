@@ -20,7 +20,7 @@ import Button from "../components/Button.astro";
   <div>
     <OpenHoursKontakt overskrift="Åbent efter aftale" monThur="Man-Tors" monThurTimes="08:00 - 16:00" fri="Fre" friTimes="08:00 - 15:00" weekend="Lør-Søn" weekendTimes="Lukket" />
   </div>
-  <div>
+  <div class="spacing1">
     <Button size="small">Book en aftale</Button>
   </div>
 </div>
@@ -54,6 +54,10 @@ import Button from "../components/Button.astro";
     margin: 0 20px;
     height: 50px;
     width: auto;
+  }
+
+  .spacing1 {
+    padding-top: var(--spacing_8);
   }
 
   @media screen and (min-width: 800px) {
