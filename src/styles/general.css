@@ -89,6 +89,10 @@ p {
   color: var(--secondary_tekst);
 }
 
+main {
+  margin: 0 2rem;
+}
+
 @media (min-width: 800px) {
   .h1 {
     font-size: 2.2rem;
