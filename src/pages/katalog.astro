@@ -1,5 +1,6 @@
 ---
 import CardKat from "../components/Card_kat.astro";
+import OverskriftWithUnderline from "../components/OverskriftWithUnderline.astro";
 import ProductFilter from "../components/ProductFilter.astro";
 import MainLayout from "../layout/MainLayout.astro";
 import "../styles/katalog.css";
@@ -13,6 +14,7 @@ const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykk
 ---
 
 <MainLayout title="Katalog">
+  <OverskriftWithUnderline overskrift="Katalog" />
   <div class="grid">
     <ProductFilter />
     <section class="product_list">
@@ -23,12 +25,29 @@ const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykk
 
 <style>
   .grid {
-    display: grid;
-    grid-template-columns: 320px 1fr;
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing_1);
   }
+
   .product_list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing_4);
+    margin-right: 2rem;
+  }
+
+  @media (min-width: 800px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+    .product_list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
   }
 </style>

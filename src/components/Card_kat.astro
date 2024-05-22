@@ -1,14 +1,16 @@
 ---
 const { info } = Astro.props;
+import Button from "./Button.astro";
 ---
 
-<article data-kat={info.tags || "hej"}>
+<article data-kat={info.tags}>
   <img src="/img/produkter/ring_zoomed.jpg" alt="" />
   <div class="productinfo">
-    <h2 class="h2">{info.name}</h2>
+    <h2 class="h3">{info.name}</h2>
     <p>{info.price}kr.</p>
   </div>
-  <a href="">Læs mere</a>
+  <div class="button"><Button size="small">Se mere</Button></div>
+  <!-- <a href="">Læs mere</a> -->
 </article>
 
 <style>
@@ -16,12 +18,28 @@ const { info } = Astro.props;
     text-align: center;
     background-color: var(--primary_felter);
     padding-bottom: 1.5rem;
+    align-self: flex-start;
   }
   .productinfo {
-    border-bottom: 1px solid hotpink;
+    border-bottom: 1px solid var(--secondary_tekst);
+    margin: 0 3rem;
   }
 
-  .h2 {
+  .h3 {
     margin: 0;
+    font-family: var(--font_geo);
+  }
+
+  p {
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    padding-top: 1rem;
+  }
+
+  .button {
+    margin: 1rem 0;
   }
 </style>
