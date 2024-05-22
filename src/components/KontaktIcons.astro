@@ -1,5 +1,5 @@
 ---
-const { svgPath, overskrift, info } = Astro.props;
+const { svgPath, overskrift, info, link } = Astro.props;
 ---
 
 <div class="container">
@@ -12,6 +12,9 @@ const { svgPath, overskrift, info } = Astro.props;
     </h2>
     <h3 class="h4">
       {info}
+      <h3 class="h4">
+        {link}
+      </h3>
     </h3>
   </div>
 </div>

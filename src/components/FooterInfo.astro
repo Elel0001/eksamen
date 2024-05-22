@@ -4,10 +4,10 @@ const { overskrift, info } = Astro.props;
 
 <div class="container">
   <div>
-    <h2 class="h3 spacing">
+    <h2 class="h3">
       {overskrift}
     </h2>
-    <h3 class="h5">
+    <h3 class="h5 spacing">
       {info}
     </h3>
   </div>
@@ -15,16 +15,7 @@ const { overskrift, info } = Astro.props;
 
 <style>
   .spacing {
-    padding-bottom: var(--spacing_2);
-  }
-  .container img {
-    width: 100px;
-    height: auto;
-  }
-
-  .container {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
-    padding-top: var(--spacing_5);
+    margin-bottom: var(--spacing_8);
+    max-width: 20ch;
   }
 </style>
