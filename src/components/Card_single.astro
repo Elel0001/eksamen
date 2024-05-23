@@ -51,7 +51,7 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
       position: relative;
       overflow: hidden;
       width: 100%;
-      height: 100%;
+      height: auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -60,15 +60,15 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
     .img_single {
       display: flex;
       transition: transform 0.5s ease-in-out;
-      width: 100%;
-      height: 100%;
+      /* width: 100%; */
+      height: auto;
       border: 1px solid red;
       overflow: hidden;
     }
 
     .carousel img {
       min-width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover;
       margin: auto;
     }
@@ -138,6 +138,11 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
       .container {
         margin-right: var(--spacing_11);
         margin-top: var(--spacing_10);
+      }
+
+      .container img {
+        max-width: 545px;
+        min-width: 250px;
       }
 
       .test_grid {
