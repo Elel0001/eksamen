@@ -14,7 +14,10 @@ const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykk
 ---
 
 <MainLayout title="Katalog">
-  <OverskriftWithUnderline overskrift="Katalog" />
+  <div class="placing_text">
+    <OverskriftWithUnderline overskrift="Katalog" />
+    <p>Her kan du se hvilke smykker vi har håndlavet gennem tiden. Hvis du finder et smykke interessant, kan du kontakte os, med henblik på køb.</p>
+  </div>
   <div class="grid">
     <ProductFilter />
     <section class="product_list">
@@ -28,6 +31,12 @@ const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykk
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
+  }
+
+  .placing_text {
+    margin-left: 0px;
+    padding-bottom: var(--spacing_8);
+    
   }
 
   .product_list {
@@ -46,5 +55,10 @@ const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykk
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
+
+    .placing_text {
+    margin-left: 320px;
+    max-width: 600px;
+
   }
 </style>
