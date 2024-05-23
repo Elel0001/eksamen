@@ -90,6 +90,10 @@ p {
   color: var(--secondary_tekst);
 }
 
+a {
+  font-family: var(--font_ver);
+}
+
 main {
   margin: 0 2rem;
 }

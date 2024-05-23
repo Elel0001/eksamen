@@ -11,27 +11,9 @@ import ForsideBox from "../components/ForsideBox.astro";
   <Hero />
   <OverskriftWithUnderline overskrift="Hans Ulrik Nielsen" />
   <div class="grid_bokses">
-    <ForsideBox
-      header="Guldsmed siden 1975"
-      introText="Velkommen til vores værksted i hjertet af København,  Grønnegade 26."
-      elaborationText="Vi har stor erfaring indenfor området og er særligt specialiseret i at lave personlige smykker af arveguld, i tæt samarbejde med dig. "
-    />
-    <ForsideBox
-      header="Vores koncept"
-      introText="Her hos os kan du få lavet et personligt smykke, få repareret smykker eller købe eksisterende unikke håndlavede smykker."
-      elaborationText="Kontakt os gerne, hvis du finder et smykke interesant, da vi ikke har en webshop, men et katalog hvor du kan se vores udvalg. "
-    />
-    <ForsideBox
-      header="Åbningstider"
-      introText="Har du spørgsmål eller drømmer om noget særligt, da kontakt os via formularen, pr. mail eller telefon."
-      elaborationText="Åbent efter aftale i tidsrummet: "
-      monThur="Man-Tors"
-      monThurTimes="08:00 - 16:00"
-      fri="Fre"
-      friTimes="08:00 - 15:00"
-      weekend="Lør-Søn"
-      weekendTimes="Lukket"
-    />
+    <ForsideBox header="Guldsmed siden 1975" introText="Velkommen til vores værksted i hjertet af København,  Grønnegade 26." elaborationText="Vi har stor erfaring indenfor området og er særligt specialiseret i at lave personlige smykker af arveguld, i tæt samarbejde med dig. " />
+    <ForsideBox header="Vores koncept" introText="Her hos os kan du få lavet et personligt smykke, få repareret smykker eller købe eksisterende unikke håndlavede smykker." elaborationText="Kontakt os gerne, hvis du finder et smykke interesant, da vi ikke har en webshop, men et katalog hvor du kan se vores udvalg. " />
+    <ForsideBox header="Åbningstider" introText="Har du spørgsmål eller drømmer om noget særligt, da kontakt os via formularen, pr. mail eller telefon." elaborationText="Åbent efter aftale i tidsrummet: " monThur="Man-Tors" monThurTimes="08:00 - 16:00" fri="Fre" friTimes="08:00 - 15:00" weekend="Lør-Søn" weekendTimes="Lukket" />
   </div>
   <div class="img_container">
     <div class="sketching">
@@ -65,10 +47,10 @@ import ForsideBox from "../components/ForsideBox.astro";
 
     .img_container {
       display: grid;
-      grid-template-columns: 0.52fr 0.5fr 0.5fr;
+      grid-template-columns: 0.5fr 0.5fr 0.5fr;
       grid-template-rows: 0.5fr 0.1fr;
-      gap: 15px;
-      padding: 2% 0;
+      gap: 30px;
+      padding: 2% 0px;
     }
 
     .sketching {
