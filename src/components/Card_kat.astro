@@ -4,7 +4,7 @@ import Button from "./Button.astro";
 ---
 
 <article data-kat={info.tags}>
-  <img src="/img/produkter/ring_zoomed.jpg" alt="" />
+  <img src=`/img/produkter/${info.image}` alt="billede af smykker" />
   <div class="productinfo">
     <h2 class="h4">{info.name}</h2>
     <p>{info.price} kr.</p>
