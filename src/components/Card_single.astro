@@ -27,7 +27,7 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
         <OverskriftWithUnderline overskrift="Lilla amatyst ring" />
       </div>
 
-      <h2 class="h5">{pris}</h2>
+      <h2 class="h3">{pris}</h2>
 
       <p>{texts1}</p>
       <p>{texts2}</p>
@@ -122,8 +122,9 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
     .h1 {
       margin-top: var(--spacing_4);
     }
-    .h5 {
+    .h3 {
       margin-bottom: var(--spacing_7);
+      margin-top: -1.6rem;
     }
 
     @media (min-width: 800px) {
