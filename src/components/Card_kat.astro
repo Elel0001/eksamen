@@ -4,13 +4,14 @@ import Button from "./Button.astro";
 ---
 
 <article data-kat={info.tags}>
-  <img src=`/img/produkter/${info.image}` alt="billede af smykker" />
+  <a href={`/katalog/${info.id}`}>
+    <img src=`/img/produkter/${info.image}` alt="billede af smykker" />
+  </a>
   <div class="productinfo">
     <h2 class="h4">{info.name}</h2>
     <p>{info.price} kr.</p>
   </div>
-  <div class="button"><Button link="/singleview" size="small">Se mere</Button></div>
-  <!-- <a href="">Se mere</a> -->
+  <div class="button"><Button link={`/katalog/${info.id}`} size="small">Se mere</Button></div>
 </article>
 
 <style>

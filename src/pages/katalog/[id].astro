@@ -1,0 +1,33 @@
+---
+export async function getStaticPaths() {
+  // Fetcher data fra databasen og ligger i konstanten 'data'
+  const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykker", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzYnlraG5uam5oaXZ2dmJnamppIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU2Nzg3NzEsImV4cCI6MjAzMTI1NDc3MX0.sOle6ArblP4c9-jM5N5RYUlWTOaJ4okr005pwOkyil8",
+    },
+  }).then((res) => res.json());
+  return data.map((onePost) => {
+    return {
+      // Lave en side der hedder id, som bruger id fra databasen (l.14)
+      //   props sender ned til siden, med info fra databasen
+      params: { id: onePost.id },
+      props: { post: onePost },
+    };
+  });
+}
+//const { id } = Astro.params;
+const { post } = Astro.props;
+
+import MainLayout from "../../layout/MainLayout.astro";
+import "../../styles/general.css";
+import Card_single from "../../components/Card_single.astro";
+---
+
+<MainLayout>
+  <Card_single imgsingle={post.image} imgsingle2={post.image} name={post.name} pris={post.price} texts1={post.material} texts2={post.size} texts3={post.description} texts4={post.varenummer} />
+</MainLayout>
+<style>
+  @media (min-width: 800px) {
+  }
+</style>

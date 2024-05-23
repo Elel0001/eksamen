@@ -3,7 +3,7 @@ import "../styles/general.css";
 import Button from "./Button.astro";
 import OverskriftWithUnderline from "../components/OverskriftWithUnderline.astro";
 
-const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.props;
+const { name, pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.props;
 ---
 
 <article>
@@ -20,19 +20,19 @@ const { pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = Astro.pr
     </div> -->
   <div class="test_grid">
     <div class="container">
-      <img src={imgsingle2} alt="" />
+      <img src=`/img/produkter/${imgsingle}` alt="billede af smykker" />
     </div>
     <div class="column_text">
       <div class="h1">
-        <OverskriftWithUnderline overskrift="Lilla amatyst ring" />
+        <OverskriftWithUnderline overskrift={name} />
       </div>
 
-      <h2 class="h3">{pris}</h2>
+      <h2 class="h3">{pris} kr.</h2>
 
       <p>{texts1}</p>
       <p>{texts2}</p>
       <p>{texts3}</p>
-      <p>{texts4}</p>
+      <p>Varenummer: {texts4}</p>
       <div class="botton_single">
         <Button size="large">Book en aftale</Button>
       </div>
