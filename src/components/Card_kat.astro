@@ -6,11 +6,11 @@ import Button from "./Button.astro";
 <article data-kat={info.tags}>
   <img src="/img/produkter/ring_zoomed.jpg" alt="" />
   <div class="productinfo">
-    <h2 class="h3">{info.name}</h2>
-    <p>{info.price}kr.</p>
+    <h2 class="h4">{info.name}</h2>
+    <p>{info.price} kr.</p>
   </div>
   <div class="button"><Button size="small">Se mere</Button></div>
-  <!-- <a href="">Læs mere</a> -->
+  <!-- <a href="">Se mere</a> -->
 </article>
 
 <style>
@@ -19,15 +19,15 @@ import Button from "./Button.astro";
     background-color: var(--primary_felter);
     padding-bottom: 1.5rem;
     align-self: flex-start;
+    border-radius: var(--radius);
   }
   .productinfo {
     border-bottom: 1px solid var(--secondary_tekst);
     margin: 0 3rem;
   }
 
-  .h3 {
+  .h4 {
     margin: 0;
-    font-family: var(--font_geo);
   }
 
   p {

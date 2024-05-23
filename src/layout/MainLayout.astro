@@ -29,4 +29,10 @@ const { title } = Astro.props;
   body {
     background-color: var(--primary_background);
   }
+
+  @media (min-width: 800px) {
+    main {
+      margin: 0 var(--spacing_12);
+    }
+  }
 </style>

@@ -4,12 +4,14 @@ import "../styles/general.css";
 import Button from "../components/Button.astro";
 ---
 
-<div class="hero">
-  <img src="img/hero_with_gradient.jpg" alt="Hero Image" />
-  <div class="title-container">
-    <div class="title h4">Anno 1975</div>
-    <div class="title_to h3">Guldsmed i Grønnegade</div>
-    <div class="hero_button"><Button size="medium">Book en aftale</Button></div>
+<div class="hero-container">
+  <div class="hero">
+    <img src="img/hero_with_gradient.jpg" alt="Hero Image" />
+    <div class="title-container">
+      <div class="title h4">Anno 1975</div>
+      <div class="title h3">Guldsmed i Grønnegade</div>
+      <div class="hero_button"><Button size="medium">Book en aftale</Button></div>
+    </div>
   </div>
 </div>
 
@@ -17,11 +19,9 @@ import Button from "../components/Button.astro";
   .hero {
     position: relative;
     width: 100%;
-    height: 27vh;
+    height: auto;
     display: grid;
-    grid-template-columns: 1fr 0.1fr 0.1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    margin: 0;
+    margin-bottom: var(--spacing_8);
   }
 
   .hero img {
@@ -36,7 +36,7 @@ import Button from "../components/Button.astro";
   .title-container {
     text-align: left;
     z-index: 1;
-    grid-column: 1 / span 1;
+    grid-column: 1 / span 3;
     grid-row: 2 / span 1;
     display: grid;
     padding-left: 5%;
@@ -47,62 +47,43 @@ import Button from "../components/Button.astro";
     color: var(--primary_background);
   }
 
-  .title_to {
-    color: var(--primary_background);
-  }
-
   .hero_button {
     padding-top: 2%;
     margin: 0;
+  }
+
+  .hero-container {
+    position: relative;
+    width: 108vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
   }
 
   @media screen and (min-width: 800px) {
     .hero {
       position: relative;
       width: 100%;
-      height: 40vh;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      margin: 0;
+      height: auto;
+      margin-bottom: var(--spacing_8);
     }
 
-    .title-container {
-      z-index: 1;
-      grid-column: 1 / span 1;
-      grid-row: 2 / span 1;
-      display: grid;
-      margin: 0;
-    }
-
-    .title {
+    .hero-container {
+      position: relative;
+      width: 102vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -48vw;
     }
   }
   @media screen and (min-width: 1200px) {
     .hero {
       position: relative;
       width: 100%;
-      height: 70vh;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      padding-top: 2%;
-      margin: 0;
-    }
-
-    .hero img {
-      margin: 0;
-    }
-
-    .title-container {
-      z-index: 1;
-      grid-column: 1 / span 1;
-      grid-row: 2 / span 1;
-      display: grid;
-      padding-left: 5%;
-      margin: 0;
+      height: auto;
+      margin-bottom: var(--spacing_8);
     }
   }
 </style>
