@@ -2,12 +2,143 @@
 import MainLayout from "../layout/MainLayout.astro";
 
 import OverskriftWithUnderline from "../components/OverskriftWithUnderline.astro";
+import OmAfsnits from "../components/OmAfsnits.astro";
 ---
 
-<MainLayout />
+<MainLayout>
+  <OverskriftWithUnderline overskrift="Om Hans Ulrik Nielsen" />
+  <div class="grid">
+    <div>
+      <p class="p_spacing">Her hos os i Grønnegade har du siden 1975 kunne få lavet et personligt smykke, få repareret smykker eller købe eksisterende unikke håndlavede smykker.</p>
+      <p class="p_spacing">Jeg glæder mig altid til at komme på arbejde om morgenen fordi jeg beskæftiger mig med et håndværk jeg holder af. Man kan næsten altid gøre lige præcis hvad man selv og kunderne ønsker.</p>
+      <p class="end_afsnit">Nedenfor ses min historie fra tiden i lære frem til i dag.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div>
+      <OmAfsnits
+        year="1957"
+        header="I lære som guldsmed"
+        introText={`Jeg har vist siden 4. ml. at det var sikkert og vist, at jeg skulle lave noget med hænderne.
+I 1957 kom jeg i lære hos guldvarefabrikken Bernhard Hertz a/s. Det var spændende, og det meste af læretiden sad jeg ved brættet (guldsmedebordet). Læretiden gik godt. Jeg fik ros.`}
+        elaborationText={`I	løbet	af	de	fire	år,	kom	jeg	alt	det	igennem	som	de	 lavede	på	værkstedet,	og	det	var	praktisk	taget	alt	almindeligt	guldsmedearbejde,	dog	undtagen	hvidgulds-	og	 juvelérarbejde.`}
+        conclusionText={`Som	sidste-års	lærling i 1961	fik	jeg	det	ærefulde	job	at	lave	korset	til	biskoppen	for	det	nye	Helsingør	Stift.	Bispekorset	er	et massivt	14	karat	guldkors,	som	blev	skåret	ud	af	en	kraftig	plade.	`}
+      />
+    </div>
+    <div class="order">
+      <img class="img_spacing" src="img/om/hun_s.webp" alt="hun" />
+    </div>
+  </div>
+  <div class="grid">
+    <div>
+      <OmAfsnits
+        year="1967"
+        header="Selvstændig mester"
+        introText={`Senere	i	1967, foreslog	guldsmeden Asby,	at	fire	af	os	svende	blev	selvstændige	 mestre,	men	med	ham	selv	 som	salgsapparat.	Vi	fandt	 ideen	god,	og	lod	det	 komme	an	på	en	prøve.	Dog hoppede jeg og to andre fra. `}
+        elaborationText={`Vi	følte	at	vi	blev	udnyttet	som	“billig”	 arbejdskraft.	Jeg	blev	altså	alm.	svend	igen.	Men	vi	 blev	alle	tre	selvstændige	senere. `}
+        conclusionText={`“Mester”	Christiansen	tog	et	tre	måneders	kursus	på	guldsmedeskolen	i	Hanau	i	Tyskland.	I	hans	fravær	skulle	jeg	lave	nogle	brede	håndlavede	armringe.	Dog var lønnen ikke svarende,	så	jeg ringede	samme	dag	til	Bernhard	Hertz	og	spurgte,	om	de	havde	brug	for	en	mand.	Jeg	sagde	derpå	op,	og	begyndte	14	dage	efter.
+Hos	BH	lavede	jeg	armringe	igen .	Det	blev	til	1341 stk.	om	året.	Det	er	ikke	så	mærkeligt,	at	man	til	sidst	fik	en	vis	rutine. Dog følte jeg der skulle ske lidt, så	jeg	meldte	mig	til	kursus	i	ædelstensfatning	på	guldsmedeskolen.`}
+      />
+    </div><div>
+      <img src="img/om/stanok_s.webp" alt="img" />
+      <img class="img_spacing" src="img/om/stanok_s.webp" alt="img" />
+    </div>
+  </div>
+  <div class="grid">
+    <div>
+      <OmAfsnits
+        year="1973"
+        header="Ophold på guldsmedehøjskolen"
+        introText={`Efter 2 år hos Flemming Kjerulff i en priviligeret	stilling, hvor jeg skulle lave unika-ringe efter mit eget hoved startede jeg på guldsmedehøjskolen. `}
+        elaborationText={`Der var et værkstedslokale	med	plads	til	12	studerende,	 “optræksrum”,	klasseværelser,	stenslibningsværksted,	trykbænke,	 støbeværksted,	keramikværksted	o.s.v.
+Det	var	et	seriøst	arbejdende	 guldsmedehøjskolehold. `}
+        conclusionText={`Som afgangsprojekt i januar 1975	lavede jeg	en	smykkeserie	med	et	motiv,	som	jeg	hentede	på Nationalmuseets	samling	fra	asiatiske	kulturfolk.	Jeg	tegnede	 og	udførte	diverse smykker som halssmykke og 	armbånd	 i	guld. Jeg	blev	så	glad	for	et mønster,	at	jeg	bruger	det	som	logo	i	firmaet. Da	vores	afgangsprojekt	var	slut	og	vi	var	færdige	og	kunne	skrive	“guldsmed	m.g.h.”	som	titel	efter	vores	 navn. Det	blev	så	stødet	til	starten	på	mit	eget	firma.`}
+      />
+    </div>
+    <div class="order">
+      <img src="img/om/stanok_s.webp" alt="img" />
+      <img class="img_spacing" src="img/om/stanok_s.webp" alt="img" />
+    </div>
+  </div>
+  <div class="grid">
+    <div>
+      <OmAfsnits
+        year="1975"
+        header="Firmaet Hans Ulrik Nielsen"
+        introText={`Jeg	lejede	mig	ind	på	et værksted	i	Pilestræde	8,	og	så	sad	der	som	 selvstændig og leverede	bestillingsvarer	og	reparationer for indehaveren. 
+Dog var der	ikke	rigtig	fremtid	i	det, da jeg	jo	var	fremlejer,	og	værkstedets	fremtid	var	ikke	så	sikker.`}
+        elaborationText={`Jeg	var	ikke	tilfreds	med	at	sidde i	Pilestræde, derfor begyndte	så	 småt	at	se	mig	om	efter	nogle	andre	lokaler.	Max	Brammer	(sølvsmed)	havde	et	værksted	i	Købmagergade,	han	var	interesseret	i	at	afhænde.	Jeg	aftalte	med	det	 samme	en	overtagelse	pr.	1.	nov.	1976. `}
+        conclusionText={`Jeg	flyttede	igen i	sommeren	1982	til	Grønnegade	med	noget	mere	plads.	
+Jeg	har	haft	megen	glæde	af	at	have	mit	værksted	i	Grønnegade.	Alle	der	kommer	siger	der	er	hyggeligt. `}
+      />
+    </div>
+    <div>
+      <img src="img/om/stanok_s.webp" alt="img" />
+      <img class="img_spacing" src="img/om/stanok_s.webp" alt="img" />
+    </div>
+  </div>
+  <div class="grid">
+    <div>
+      <OmAfsnits
+        year="1992"
+        header="Kgl. underleverandør"
+        introText={`Til kongeparrets	sølvbryllup,	fik	jeg	den	 ære,	at	isætte	stenene	på	en	opsats	som	dronningen	gav	til	Prinsen.	Gaven	til	dronningen	fra	 Prinsen	var	et	perlecollier	med	rubiner	og	brillanter,	hvor	jeg	også	satte	stenene	i.`}
+        elaborationText={`Prinsesse	Marys	øreringe	som	hun	bar	ved	brylluppet satte	jeg også	stenene	i.	Derudover fik	jeg	opgaven	at	reparere	Kronprins	Frederiks	 elefantorden. `}
+      />
+    </div>
+    <div class="kgl_img_grid order">
+      <img src="img/om/elefant_s.webp" alt="img" />
+      <img class="img_spacing" src="img/om/elefant_s.webp" alt="img" />
+    </div>
+  </div>
+  <div class="grid">
+    <div class="max_width">
+      <OmAfsnits
+        year="2018"
+        header="Forestående generationsskifte"
+        introText={`I	2018	indgik	jeg	en	aftale	med	Celine	Schneevoigt	om	at	hun	kunne	sidde	som	selvstændig	i	firmaet.		Hun blev udlært	guldsmed hos mig 31.	dec.	2021 og	er	i	efteråret	2022	begyndt	på	en	videregående	uddannelse	på	CBS	i	erhvervsøkonomi,	psykologi	mm.	for at være	bedre	rustet	til	bagefter	at	overtage	værkstedet.	`}
+        elaborationText={`Jeg	vil	prøve	at	gå	mere	ind	i	bestillingsarbejde	til	 private	gennem	hjemmesiden,	Instagram	mv.	Desuden	vil	jeg	arbejde	på	at	få	solgt	den	kollektion	som	jeg	har	 oparbejdet	gennem	årene.`}
+        conclusionText={`Jeg	ville	helt	sikkert	gå	ind	i	det	samme	fag,	hvis	jeg	skulle	vælge	i	dag. Over	65	år	er	gået,	og	det	er	ikke	til	at	forstå	hvor	tiden	er	blevet	af.`}
+      />
+    </div>
+    <div>
+      <img class="img_spacing" src="img/om/hun_s.webp" alt="hun" />
+    </div>
+  </div>
+</MainLayout>
+<style>
+  .p_spacing {
+    padding-bottom: var(--spacing_2);
+    max-width: 70ch;
+  }
 
-<OverskriftWithUnderline overskrift="Om Hans Ulrik Nielsen" />
+  .end_afsnit {
+    padding-bottom: var(--spacing_10);
+  }
 
-<div></div>
+  .img_spacing {
+    padding-bottom: var(--spacing_10);
+  }
 
-<style></style>
+  .kgl_img_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing_1);
+  }
+
+  @media (min-width: 800px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing_11);
+    }
+
+    .order {
+      order: -1;
+    }
+
+    .max_width {
+      max-width: 70ch;
+    }
+  }
+</style>

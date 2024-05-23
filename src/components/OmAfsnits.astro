@@ -1,0 +1,49 @@
+---
+const { year } = Astro.props;
+const { header } = Astro.props;
+const { introText } = Astro.props;
+const { elaborationText } = Astro.props;
+const { conclusionText } = Astro.props;
+---
+
+<h2 class="h5">{year}</h2>
+<div class="padding">
+  <h3 class="h2">{header}</h3>
+
+  <hr class="short-line" />
+</div>
+
+<p class="p_spacing">{introText}</p>
+<p class="p_spacing">{elaborationText}</p>
+<p class="end_afsnit">{conclusionText}</p>
+
+<style>
+  .p_spacing {
+    padding-bottom: var(--spacing_2);
+  }
+
+  .end_afsnit {
+    padding-bottom: var(--spacing_8);
+  }
+
+  .short-line {
+    width: 72px;
+    margin: 5px 0;
+    border: none;
+    height: 1.5px;
+    background-color: var(--secondary_strokes);
+  }
+
+  .padding {
+    padding-bottom: 1.8rem;
+  }
+
+  @media (min-width: 700px) {
+    .short-line {
+      width: 100px;
+      border: none;
+      height: 2px;
+      background-color: var(--secondary_strokes);
+    }
+  }
+</style>
