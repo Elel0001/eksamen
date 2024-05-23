@@ -20,9 +20,6 @@ const { svgPath, overskrift, info, link } = Astro.props;
 </div>
 
 <style>
-  .spacing {
-    padding-bottom: var(--spacing_3);
-  }
   .container img {
     width: 100px;
     height: auto;
@@ -31,6 +28,10 @@ const { svgPath, overskrift, info, link } = Astro.props;
   .container {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr;
-    padding-top: 5%;
+    padding-top: var(--spacing_5);
+  }
+
+  .h4 {
+    max-width: 33ch;
   }
 </style>
