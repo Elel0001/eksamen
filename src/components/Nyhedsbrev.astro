@@ -1,11 +1,11 @@
 ---
-import Button from "./Button.astro";
+import "../styles/general.css";
 ---
 
 <!-- Lavet med hjælp fra W3 Schools -->
 <form netlify>
   <h1 class="h3">Nyhedsbrev</h1>
-    <div>
+  <div>
     <input type="text" placeholder="Navn" name="name" required />
     <input type="text" placeholder="Email" name="mail" required />
   </div>
@@ -20,8 +20,13 @@ import Button from "./Button.astro";
     margin-top: var(--spacing_6);
   }
 
-  .input_container{
+  .input_container {
     padding-top: 8px;
+  }
+
+  input[type="text"]:focus {
+    outline: none; /* Fjern standard outline */
+    border-color: var(--secondary_gold); /* Skift til den ønskede farve */
   }
 
   input[type="text"] {
@@ -45,13 +50,12 @@ import Button from "./Button.astro";
     padding: 0.4rem;
     margin: 6px 0;
     display: inline-block;
-    border: 1px solid var(--secondary_tekst);
+    /* border: 1px solid var(--secondary_tekst); */
     box-sizing: border-box;
     border-radius: 5px;
     font-family: var(--font_ver);
     font-size: 1rem;
   }
-
 
   @media screen and (min-width: 800px) {
     form {
@@ -66,13 +70,13 @@ import Button from "./Button.astro";
     }
 
     input[type="submit"] {
-    padding: 0.5rem;
-    margin: 8px 0;
-    font-size: 1rem;
-  }
+      padding: 0.5rem;
+      margin: 8px 0;
+      font-size: 1rem;
+    }
 
-   .input_container{
-    padding-top: 38px;
+    .input_container {
+      padding-top: 38px;
+    }
   }
-
 </style>
