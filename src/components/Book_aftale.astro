@@ -43,25 +43,40 @@ import "../styles/general.css";
     padding: 12px 20px;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+    display: block;
+    text-align: center;
   }
 
-  /* When moving the mouse over the submit button, add a darker green color */
   input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: var(--primary_card);
+    color: var(--secondary_gold);
+    border: 2px solid var(--secondary_gold);
+    padding: 10px 20px;
   }
 
-  input[type="text"]:focus {
-    outline: none; /* Fjern standard outline */
-    border-color: var(--secondary_gold); /* Skift til den ønskede farve */
+  input[type="text"]:focus,
+  textarea {
+    outline: none; /* Fjerner standard outline */
+    border-color: var(--secondary_tekst);
   }
 
-  .grid_name {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+  .container {
+    display: flex;
+    justify-content: center; /* Centerer vandret */
+    align-items: center; /* Centerer lodret */
   }
 
-  form {
-    max-width: 800px;
+  @media screen and (min-width: 800px) {
+    .grid_name {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    form {
+      max-width: 800px;
+      width: 100%;
+    }
   }
 </style>
