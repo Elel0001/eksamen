@@ -12,9 +12,15 @@ const { svgPath, overskrift, info, link } = Astro.props;
     </h2>
     <h3 class="h4">
       {info}
-      <h3 class="h4">
-        {link}
-      </h3>
+      {
+        link && (
+          <div>
+            <a href={link} class="link">
+              Find adressen her
+            </a>
+          </div>
+        )
+      }
     </h3>
   </div>
 </div>
@@ -33,5 +39,10 @@ const { svgPath, overskrift, info, link } = Astro.props;
 
   .h4 {
     max-width: 33ch;
+  }
+
+  .link {
+    color: var(--link-color); /* Juster farven efter behov */
+    text-decoration: underline;
   }
 </style>
