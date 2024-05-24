@@ -1,0 +1,78 @@
+---
+import Button from "./Button.astro";
+---
+
+<!-- Lavet med hjælp fra W3 Schools -->
+<form netlify>
+  <h1 class="h3">Nyhedsbrev</h1>
+    <div>
+    <input type="text" placeholder="Navn" name="name" required />
+    <input type="text" placeholder="Email" name="mail" required />
+  </div>
+  <div class="input_container">
+    <input type="submit" value="Tilmeld dig" />
+  </div>
+</form>
+
+<style>
+  form {
+    max-width: 220px;
+    margin-top: var(--spacing_6);
+  }
+
+  .input_container{
+    padding-top: 8px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 0.4rem;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid var(--secondary_tekst);
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: var(--font_ver);
+    font-size: 1rem;
+    color: var(--secondary_strokes);
+  }
+
+  input[type="submit"] {
+    background-color: var(--secondary_gold);
+    color: var(--primary_card);
+    border: none;
+    width: 70%;
+    padding: 0.4rem;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid var(--secondary_tekst);
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: var(--font_ver);
+    font-size: 1rem;
+  }
+
+
+  @media screen and (min-width: 800px) {
+    form {
+      max-width: 280px;
+      margin: 0;
+    }
+
+    input[type="text"] {
+      padding: 0.7rem;
+      margin: 6px 0;
+      font-size: 0.9rem;
+    }
+
+    input[type="submit"] {
+    padding: 0.5rem;
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+
+   .input_container{
+    padding-top: 38px;
+  }
+
+</style>

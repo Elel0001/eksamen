@@ -2,6 +2,7 @@
 import FooterInfo from "../components/FooterInfo.astro";
 import OpenHoursKontakt from "../components/OpenHoursKontakt.astro";
 import Button from "../components/Button.astro";
+import Nyhedsbrev from "./Nyhedsbrev.astro";
 ---
 
 <div class="footer-container">
@@ -20,9 +21,10 @@ import Button from "../components/Button.astro";
   <div>
     <OpenHoursKontakt overskrift="Åbent efter aftale" monThur="Man-Tors" monThurTimes="08:00 - 16:00" fri="Fre" friTimes="08:00 - 15:00" weekend="Lør-Søn" weekendTimes="Lukket" />
   </div>
-  <div class="spacing1">
-    <Button size="small">Book en aftale</Button>
-  </div>
+  <!-- <div class="spacing1">
+    <Button link="/kontakt" size="small">Book en aftale</Button>
+  </div> -->
+  <Nyhedsbrev />
 </div>
 <style>
   .footer-container {

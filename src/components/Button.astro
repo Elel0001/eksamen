@@ -1,19 +1,20 @@
 ---
-const { size } = Astro.props;
+const { size, link } = Astro.props;
 ---
 
-<button class={size}><slot /></button>
+<a class={size} href={link}><slot /></a>
 
 <style>
-  button {
+  a {
     border-radius: 5px;
     background-color: var(--secondary_gold);
     border: 2px solid var(--secondary_gold);
     color: var(--primary_card);
     font-size: 1rem;
+    text-decoration: none;
   }
 
-  button:hover {
+  a:hover {
     background-color: var(--primary_card);
     color: var(--secondary_gold);
     border: 2px solid var(--secondary_gold);
@@ -28,11 +29,14 @@ const { size } = Astro.props;
   }
 
   .large {
-    padding: 10px 267px;
+    padding: 10px 20px;
+    width: 100%;
+    display: block;
+    text-align: center;
   }
 
   @media (min-width: 769px) {
-    button {
+    a {
       font-size: 1.3rem;
     }
     .small {
@@ -41,10 +45,6 @@ const { size } = Astro.props;
 
     .medium {
       padding: 8px 40px;
-    }
-
-    .large {
-      padding: 10px 267px;
     }
   }
 </style>
