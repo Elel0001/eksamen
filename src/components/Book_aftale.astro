@@ -1,20 +1,24 @@
 ---
 import "../styles/general.css";
+import OverskriftWithUnderline from "./OverskriftWithUnderline.astro";
 ---
 
-<div class="container">
-  <form action="action_page.php">
-    <div class="grid_name">
-      <input type="text" id="fname" name="firstname" placeholder="Fornavn" required />
-      <input type="text" id="lname" name="lastname" placeholder="Efternavn" required />
-    </div>
-    <input type="text" placeholder="Email" name="mail" required />
-    <textarea id="subject" name="subject" placeholder="Din besked" style="height:200px"></textarea>
+<div class="wrapper">
+  <OverskriftWithUnderline overskrift="Book en aftale" />
+  <div class="container">
+    <form action="action_page.php">
+      <div class="grid_name">
+        <input type="text" id="fname" name="firstname" placeholder="Fornavn" required />
+        <input type="text" id="lname" name="lastname" placeholder="Efternavn" required />
+      </div>
+      <input type="text" placeholder="Email" name="mail" required />
+      <textarea id="subject" name="subject" placeholder="Din besked" style="height:200px"></textarea>
 
-    <div class="input_container">
-      <input type="submit" value="Send besked" />
-    </div>
-  </form>
+      <div class="input_container">
+        <input type="submit" value="Send besked" />
+      </div>
+    </form>
+  </div>
 </div>
 
 <style>
@@ -65,6 +69,11 @@ import "../styles/general.css";
     display: flex;
     justify-content: center; /* Centerer vandret */
     align-items: center; /* Centerer lodret */
+    margin-bottom: var(--spacing_8);
+  }
+
+  .wrapper {
+    margin: var(--spacing_8) 0;
   }
 
   @media screen and (min-width: 800px) {
@@ -77,6 +86,10 @@ import "../styles/general.css";
     form {
       max-width: 800px;
       width: 100%;
+    }
+
+    .wrapper {
+      margin: var(--spacing_11) 0;
     }
   }
 </style>
