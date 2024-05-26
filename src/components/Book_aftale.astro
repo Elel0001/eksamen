@@ -4,21 +4,22 @@ import OverskriftWithUnderline from "./OverskriftWithUnderline.astro";
 ---
 
 <div class="wrapper">
-  <OverskriftWithUnderline overskrift="Book en aftale" />
-  <div class="container">
-    <form action="action_page.php">
-      <div class="grid_name">
-        <input type="text" id="fname" name="firstname" placeholder="Fornavn" required />
-        <input type="text" id="lname" name="lastname" placeholder="Efternavn" required />
-      </div>
-      <input type="text" placeholder="Email" name="mail" required />
-      <textarea id="subject" name="subject" placeholder="Din besked" style="height:200px"></textarea>
-
-      <div class="input_container">
-        <input type="submit" value="Send besked" />
-      </div>
-    </form>
+  <div class="placing">
+    <OverskriftWithUnderline overskrift="Book en aftale" />
   </div>
+  <div class="container"></div>
+  <form action="action_page.php">
+    <div class="grid_name">
+      <input type="text" id="fname" name="firstname" placeholder="Fornavn" required />
+      <input type="text" id="lname" name="lastname" placeholder="Efternavn" required />
+    </div>
+    <input type="text" placeholder="Email" name="mail" required />
+    <textarea id="subject" name="subject" placeholder="Din besked" style="height:200px"></textarea>
+
+    <div class="input_container">
+      <input type="submit" value="Send besked" />
+    </div>
+  </form>
 </div>
 
 <style>
@@ -66,14 +67,29 @@ import OverskriftWithUnderline from "./OverskriftWithUnderline.astro";
   }
 
   .container {
+    width: 100%;
     display: flex;
-    justify-content: center; /* Centerer vandret */
-    align-items: center; /* Centerer lodret */
-    margin-bottom: var(--spacing_8);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .placing {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  form {
+    max-width: 800px;
+    width: 100%;
   }
 
   .wrapper {
-    margin: var(--spacing_8) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--spacing_11);
+    margin-bottom: var(--spacing_8);
   }
 
   @media screen and (min-width: 800px) {
@@ -81,15 +97,6 @@ import OverskriftWithUnderline from "./OverskriftWithUnderline.astro";
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 15px;
-    }
-
-    form {
-      max-width: 800px;
-      width: 100%;
-    }
-
-    .wrapper {
-      margin: var(--spacing_11) 0;
     }
   }
 </style>
