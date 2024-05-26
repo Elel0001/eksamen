@@ -21,9 +21,6 @@ import Nyhedsbrev from "./Nyhedsbrev.astro";
   <div>
     <OpenHoursKontakt overskrift="Åbent efter aftale" monThur="Man-Tors" monThurTimes="08:00 - 16:00" fri="Fre" friTimes="08:00 - 15:00" weekend="Lør-Søn" weekendTimes="Lukket" />
   </div>
-  <!-- <div class="spacing1">
-    <Button link="/kontakt" size="small">Book en aftale</Button>
-  </div> -->
   <Nyhedsbrev />
 </div>
 <style>
@@ -58,10 +55,6 @@ import Nyhedsbrev from "./Nyhedsbrev.astro";
     width: auto;
   }
 
-  .spacing1 {
-    padding-top: var(--spacing_8);
-  }
-
   @media screen and (min-width: 800px) {
     .grid_footer {
       display: grid;
@@ -69,10 +62,6 @@ import Nyhedsbrev from "./Nyhedsbrev.astro";
       justify-content: center;
       margin-left: 15%;
       margin-bottom: var(--spacing_10);
-    }
-
-    .spacing1 {
-      padding-top: 0;
     }
   }
 </style>

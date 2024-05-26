@@ -28,8 +28,12 @@ const { overskrift, info } = Astro.props;
     </table>
   </div>
 </div><div class="soc_media">
-  <img src="/icons/facebook_desk.svg" alt="facebook" />
-  <img src="/icons/insta_desk.svg" alt="facebook" />
+  <a href="https://www.facebook.com/Guldsmed.Hans.Ulrik.Nielsen/?locale=da_DK" target="_blank" rel="noopener noreferrer">
+    <img src="/icons/facebook_desk.svg" alt="facebook" />
+  </a>
+  <a href="https://www.instagram.com/hansulriknielsen?igsh=bGE0b3V5dWR6cGU4" target="_blank" rel="noopener noreferrer">
+    <img src="/icons/insta_desk.svg" alt="facebook" />
+  </a>
 </div>
 
 <style>
@@ -54,6 +58,10 @@ const { overskrift, info } = Astro.props;
 
   .soc_media {
     padding-top: var(--spacing_6);
+  }
+
+  a {
+    text-decoration: none;
   }
 
   @media (min-width: 700px) {
