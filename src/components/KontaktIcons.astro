@@ -15,7 +15,7 @@ const { svgPath, overskrift, info, link } = Astro.props;
       {
         link && (
           <div>
-            <a href={link} class="link">
+            <a href={link} class="link" target="_blank" rel="noopener noreferrer">
               Find adressen her
             </a>
           </div>
@@ -24,6 +24,7 @@ const { svgPath, overskrift, info, link } = Astro.props;
     </h3>
   </div>
 </div>
+<!-- classen "Target" og "rel" gør, at siden åbner i et nye vindue -->
 
 <style>
   .container img {
