@@ -8,8 +8,10 @@ import Button from "../components/Button.astro";
   <div class="hero">
     <img src="img/hero_with_gradient.jpg" alt="Hero Image" />
     <div class="title-container">
-      <div class="title h4">Anno 1975</div>
-      <div class="title h3">Guldsmed i Grønnegade</div>
+      <div class="padding">
+        <div class="title h4">Anno 1975</div>
+        <div class="title h3">Guldsmed i Grønnegade</div>
+      </div>
       <div class="hero_button"><Button link="/kontakt" size="medium">Book en aftale</Button></div>
     </div>
   </div>
@@ -41,6 +43,10 @@ import Button from "../components/Button.astro";
     display: grid;
     padding-left: 5%;
     margin: 0;
+  }
+
+  .padding {
+    padding-bottom: 0.75rem;
   }
 
   .title {
