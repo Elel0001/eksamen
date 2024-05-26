@@ -3,9 +3,11 @@ import MainLayout from "../layout/MainLayout.astro";
 
 import OverskriftWithUnderline from "../components/OverskriftWithUnderline.astro";
 import OmAfsnits from "../components/OmAfsnits.astro";
+import Indicator from "../components/Indicator.astro";
 ---
 
 <MainLayout>
+  <Indicator />
   <OverskriftWithUnderline overskrift="Om Hans Ulrik Nielsen" />
   <div class="grid">
     <div>
@@ -109,6 +111,7 @@ Jeg	har	haft	megen	glæde	af	at	have	mit	værksted	i	Grønnegade.	Alle	der	komme
     </div>
   </div>
 </MainLayout>
+
 <style>
   .p_spacing {
     padding-bottom: var(--spacing_2);
