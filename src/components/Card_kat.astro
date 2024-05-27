@@ -9,7 +9,7 @@ import Button from "./Button.astro";
   </a>
   <div class="productinfo">
     <h2 class="h4">{info.name}</h2>
-    <p>{info.price} kr.</p>
+    <p class="pris_tekst">{info.price} kr.</p>
   </div>
   <div class="button"><Button link={`/katalog/${info.id}`} size="small">Se mere</Button></div>
 </article>
@@ -30,6 +30,11 @@ import Button from "./Button.astro";
   .h4 {
     margin: 0;
     font-size: 1.1rem;
+  }
+
+  .pris_tekst {
+    font-family: var(--font_ver);
+    font-size: 1rem;
   }
 
   p {
