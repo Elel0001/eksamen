@@ -14,7 +14,7 @@ import OverskriftWithUnderline from "./OverskriftWithUnderline.astro";
       <input type="text" id="lname" name="lastname" placeholder="Efternavn" required />
     </div>
     <input type="text" placeholder="Email" name="mail" required />
-    <textarea id="subject" name="subject" placeholder="Din besked" style="height:200px"></textarea>
+    <textarea id="subject" name="subject" placeholder="Din besked" style="height:100px"></textarea>
 
     <div class="input_container">
       <input type="submit" value="Send besked" />
@@ -23,7 +23,6 @@ import OverskriftWithUnderline from "./OverskriftWithUnderline.astro";
 </div>
 
 <style>
-  /* Style inputs with type="text", select elements and textareas */
   input[type="text"],
   select,
   textarea {
@@ -40,7 +39,6 @@ import OverskriftWithUnderline from "./OverskriftWithUnderline.astro";
     color: var(--secondary_strokes);
   }
 
-  /* Style the submit button with a specific background color etc */
   input[type="submit"] {
     background-color: var(--secondary_gold);
     color: var(--primary_card);
