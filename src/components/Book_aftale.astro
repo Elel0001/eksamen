@@ -8,7 +8,7 @@ import OverskriftWithUnderline from "./OverskriftWithUnderline.astro";
     <OverskriftWithUnderline overskrift="Book en aftale" />
   </div>
   <div class="container"></div>
-  <form action="action_page.php">
+  <form netlify id="kontaktForm">
     <div class="grid_name">
       <input type="text" id="fname" name="firstname" placeholder="Fornavn" required />
       <input type="text" id="lname" name="lastname" placeholder="Efternavn" required />
@@ -21,6 +21,7 @@ import OverskriftWithUnderline from "./OverskriftWithUnderline.astro";
     </div>
   </form>
 </div>
+<div id="thank-you-message" style="display:none;">Tak for din henvendelse! <br />Vi vender tilbage til dig hurtigst muligt.</div>
 
 <style>
   input[type="text"],
@@ -86,7 +87,13 @@ import OverskriftWithUnderline from "./OverskriftWithUnderline.astro";
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: var(--spacing_8) 0;
+    margin-top: var(--spacing_8);
+  }
+
+  #thank-you-message {
+    margin-bottom: var(--spacing_8);
+    font-family: var(--font_ver);
+    font-size: 0.9rem;
   }
 
   @media screen and (min-width: 800px) {
@@ -99,5 +106,27 @@ import OverskriftWithUnderline from "./OverskriftWithUnderline.astro";
     .wrapper {
       margin-top: var(--spacing_11);
     }
+
+    #thank-you-message {
+      display: flex;
+      text-align: center;
+    }
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("kontaktForm");
+    const thankYouMessage = document.getElementById("thank-you-message");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Forhindrer standard formularindsendelse
+
+      // Skjul formularen
+      form.style.display = "none";
+
+      // Vis takke-beskeden
+      thankYouMessage.style.display = "block";
+    });
+  });
+</script>

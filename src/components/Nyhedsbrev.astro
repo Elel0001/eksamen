@@ -3,7 +3,7 @@ import "../styles/general.css";
 ---
 
 <!-- Lavet med hjælp fra W3 Schools -->
-<form netlify>
+<form netlify id="nyhedsbrevForm">
   <h1 class="h3">Nyhedsbrev</h1>
   <div>
     <input type="text" placeholder="Navn" name="name" required />
@@ -13,6 +13,8 @@ import "../styles/general.css";
     <input type="submit" value="Tilmeld dig" />
   </div>
 </form>
+<!-- Hjælp fra tutorer til at få tak-meddelelse frem -->
+<div id="thank-you-message" style="display:none;">Tak for din tilmelding!</div>
 
 <style>
   form {
@@ -62,6 +64,13 @@ import "../styles/general.css";
     border: 2px solid var(--secondary_gold);
   }
 
+  #thank-you-message {
+    margin-top: var(--spacing_6);
+    max-width: 250px;
+    font-family: var(--font_ver);
+    font-size: 0.9rem;
+  }
+
   @media screen and (min-width: 800px) {
     form {
       max-width: 280px;
@@ -83,5 +92,27 @@ import "../styles/general.css";
     .input_container {
       padding-top: 38px;
     }
+
+    #thank-you-message {
+      margin-top: var(--spacing_2);
+    }
   }
 </style>
+
+<!-- hjælp fra tutorer til at få tak-meddelelse frem -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("nyhedsbrevForm");
+    const thankYouMessage = document.getElementById("thank-you-message");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Forhindrer standard formularindsendelse
+
+      // Skjul formularen
+      form.style.display = "none";
+
+      // Vis takke-beskeden
+      thankYouMessage.style.display = "block";
+    });
+  });
+</script>
