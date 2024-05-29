@@ -36,6 +36,7 @@ const { monThur, monThurTimes, fri, friTimes, weekend, weekendTimes } = Astro.pr
   table.openingHours {
     width: 62%;
     /* padding-bottom: var(--spacing_5); */
+    max-width: 200px;
   }
 
   table.openingHours td:last-child {
@@ -47,13 +48,13 @@ const { monThur, monThurTimes, fri, friTimes, weekend, weekendTimes } = Astro.pr
     padding-top: var(--spacing_1);
     padding-bottom: var(--spacing_1);
   }
-
-  @media (min-width: 700px) {
+  @media (min-width: 600px) {
     table.openingHours {
-      width: 66%;
+      width: 90%;
       font-size: 1.1rem;
       font-family: var(--font_geo);
       color: var(--secondary_tekst);
+      max-width: 300px;
     }
   }
 </style>
