@@ -94,20 +94,6 @@ console.log("kata props", Astro.props);
     top: 45%;
   }
 
-  /* 
-  .carousel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 50px;
-    width: 50px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    object-fit: cover;
-    border: none;
-    cursor: pointer;
-  } */
-
   .botton_single {
     margin-bottom: var(--spacing_6);
   }
@@ -160,51 +146,6 @@ console.log("kata props", Astro.props);
     .prev {
       top: 28%;
     }
-
-    /*   .container_single {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    } */
-
-    /*  .container {
-      margin-right: var(--spacing_11);
-      margin-top: var(--spacing_10);
-    }
-
-    .container img {
-      max-width: 545px;
-      min-width: 250px;
-    } */
-
-    /*    .test_grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    } */
-
-    /*.column_picture {
-        grid-column: 1 / 2;
-      }
-
-      .column_text {
-        grid-column: 2 / 3;
-      }*/
-    /*  .img_single {
-      margin-top: var(--spacing_2);
-      padding: var(--spacing_10);
-    }
-    .carousel .prev {
-      left: 10%;
-    }
-
-    .carousel .next {
-      right: 10%;
-    } */
-    /*Ret pilene til her */
-    .column_picture {
-      height: 40vh;
-      width: 35vw;
-      /*Rem bruges her istedet - se evt. var */
-    }
   }
 </style>
 
@@ -223,27 +164,4 @@ console.log("kata props", Astro.props);
     const slideWidth = container.clientWidth;
     container.scrollLeft += slideWidth;
   });
-
-  /*  let slideIndex = 0;
-  showSlide(slideIndex);
-
-  function changeSlide(n) {
-    showSlide((slideIndex += n));
-  } */
-
-  /*   function showSlide(n) {
-    const slides = document.querySelectorAll(".carousel img");
-    const totalSlides = slides.length;
-    console.log(totalSlides);
-    if (n >= totalSlides) {
-      slideIndex = 0;
-    }
-    if (n < 0) {
-      slideIndex = totalSlides - 1;
-    } */
-
-  /*     const carouselContainer = document.querySelector(".img_single");
-    carouselContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
-  } */
-  /*Chat gpt slut */
 </script>
