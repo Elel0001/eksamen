@@ -1,0 +1,25 @@
+---
+const { page1, page2, page3, link } = Astro.props;
+---
+
+<div class="bc_container">
+  <a class="bc h5" href={link}>{page1} <slot /></a>
+  <a class="bc h5" href={link}>{page2}</a>
+  <h5 class="bc h5">{page3}</h5>
+</div>
+
+<style>
+  .bc {
+    text-decoration: none;
+  }
+
+  .bc_container {
+    padding-top: var(--spacing_3);
+    padding-bottom: var(--spacing_10);
+  }
+
+  @media (max-width: 800px) {
+    .bc {
+    }
+  }
+</style>

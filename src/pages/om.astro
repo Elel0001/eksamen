@@ -4,10 +4,19 @@ import MainLayout from "../layout/MainLayout.astro";
 import OverskriftWithUnderline from "../components/OverskriftWithUnderline.astro";
 import OmAfsnits from "../components/OmAfsnits.astro";
 import Indicator from "../components/Indicator.astro";
+import BreadCrumbs from "../components/BreadCrumbs.astro";
 ---
 
 <MainLayout>
   <Indicator />
+  <div class="bc">
+    <BreadCrumbs link="/#">
+      <span class="underline">Hjem</span>&nbsp;/&nbsp;
+    </BreadCrumbs>
+    <BreadCrumbs link="/om">
+      <span class="underline">Om</span>
+    </BreadCrumbs>
+  </div>
   <OverskriftWithUnderline overskrift="Om Hans Ulrik Nielsen" />
   <div class="grid">
     <div>
@@ -133,6 +142,22 @@ Jeg	har	haft	megen	glæde	af	at	have	mit	værksted	i	Grønnegade.	Alle	der	komme
   }
 
   @media (min-width: 800px) {
+    .bc {
+      display: inline-flex;
+    }
+
+    .underline {
+      position: relative;
+    }
+
+    .underline::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      border-bottom: 1px solid var(--secondary_tekst);
+    }
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
