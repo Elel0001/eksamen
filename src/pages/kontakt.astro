@@ -5,9 +5,18 @@ import KontaktIcons from "../components/KontaktIcons.astro";
 import Button from "../components/Button.astro";
 import OpenHours from "../components/OpenHours.astro";
 import BookAftale from "../components/Book_aftale.astro";
+import BreadCrumbs from "../components/BreadCrumbs.astro";
 ---
 
 <MainLayout>
+  <div class="bc">
+    <BreadCrumbs link="/#">
+      <span class="hover">Hjem</span>&nbsp;/&nbsp;
+    </BreadCrumbs>
+    <BreadCrumbs link="/kontakt">
+      <span class="underline">Kontakt</span>
+    </BreadCrumbs>
+  </div>
   <OverskriftWithUnderline overskrift="Kontakt" />
   <div class="container">
     <div class="icons_cont">
@@ -35,6 +44,39 @@ import BookAftale from "../components/Book_aftale.astro";
     .img_cont {
       margin-top: 4%;
       margin-left: 13%;
+    }
+    .bc {
+      display: inline-flex;
+    }
+
+    .underline {
+      position: relative;
+    }
+
+    .underline::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      border-bottom: 1px solid var(--secondary_tekst);
+    }
+    .hover {
+      position: relative;
+    }
+
+    .hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      border-bottom: 1px solid var(--secondary_tekst);
+      transition: width 0.3s ease-in-out;
+    }
+
+    .hover:hover::after {
+      width: 100%;
     }
   }
 </style>

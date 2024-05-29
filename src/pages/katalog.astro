@@ -4,6 +4,7 @@ import OverskriftWithUnderline from "../components/OverskriftWithUnderline.astro
 import ProductFilter from "../components/ProductFilter.astro";
 import MainLayout from "../layout/MainLayout.astro";
 import "../styles/katalog.css";
+import BreadCrumbs from "../components/BreadCrumbs.astro";
 // Fetcher data fra databasen og ligger i konstanten 'data'
 const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykker", {
   method: "GET",
@@ -14,6 +15,14 @@ const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykk
 ---
 
 <MainLayout title="Katalog">
+  <div class="bc">
+    <BreadCrumbs link="/#">
+      <span class="hover">Hjem</span>&nbsp;/&nbsp;
+    </BreadCrumbs>
+    <BreadCrumbs link="/katalog">
+      <span class="underline">Katalog</span>
+    </BreadCrumbs>
+  </div>
   <div class="placing_text">
     <OverskriftWithUnderline overskrift="Katalog" />
     <p>Her kan du se hvilke smykker vi har håndlavet gennem tiden. Hvis du finder et smykke interessant, kan du kontakte os, med henblik på køb. <br />Du kan også lade dig inspirere til dit eget personlige design.</p>
@@ -59,6 +68,39 @@ const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykk
       margin-left: 320px;
       max-width: 600px;
       padding-bottom: var(--spacing_8);
+    }
+    .bc {
+      display: inline-flex;
+    }
+
+    .underline {
+      position: relative;
+    }
+
+    .underline::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      border-bottom: 1px solid var(--secondary_tekst);
+    }
+    .hover {
+      position: relative;
+    }
+
+    .hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      border-bottom: 1px solid var(--secondary_tekst);
+      transition: width 0.3s ease-in-out;
+    }
+
+    .hover:hover::after {
+      width: 100%;
     }
   }
 </style>

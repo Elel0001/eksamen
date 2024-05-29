@@ -11,7 +11,7 @@ import BreadCrumbs from "../components/BreadCrumbs.astro";
   <Indicator />
   <div class="bc">
     <BreadCrumbs link="/#">
-      <span class="underline">Hjem</span>&nbsp;/&nbsp;
+      <span class="hover">Hjem</span>&nbsp;/&nbsp;
     </BreadCrumbs>
     <BreadCrumbs link="/om">
       <span class="underline">Om</span>
@@ -185,6 +185,40 @@ Jeg	har	haft	megen	glæde	af	at	have	mit	værksted	i	Grønnegade.	Alle	der	komme
 
     .margin {
       margin-bottom: var(--spacing_9);
+    }
+
+    .bc {
+      display: inline-flex;
+    }
+
+    .underline {
+      position: relative;
+    }
+
+    .underline::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      border-bottom: 1px solid var(--secondary_tekst);
+    }
+    .hover {
+      position: relative;
+    }
+
+    .hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      border-bottom: 1px solid var(--secondary_tekst);
+      transition: width 0.3s ease-in-out;
+    }
+
+    .hover:hover::after {
+      width: 100%;
     }
   }
 </style>
