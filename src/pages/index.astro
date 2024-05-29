@@ -60,15 +60,16 @@ import ForsideBox from "../components/ForsideBox.astro";
     .grid_bokses {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 30px;
+      gap: var(--spacing_5);
     }
 
     .img_container {
       display: grid;
       grid-template-columns: 0.5fr 0.5fr 0.5fr;
       grid-template-rows: 0.5fr 0.1fr;
-      gap: 30px;
-      padding: 2% 0px;
+      gap: var(--spacing_5);
+      padding: 5% 0px;
+      align-items: end;
     }
 
     .sketching {

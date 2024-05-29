@@ -13,7 +13,7 @@ import BreadCrumbs from "../components/BreadCrumbs.astro";
     <BreadCrumbs link="/#">
       <span class="hover">Hjem</span>&nbsp;/&nbsp;
     </BreadCrumbs>
-    <BreadCrumbs link="/kontakt">
+    <BreadCrumbs link="/katalog">
       <span class="underline">Kontakt</span>
     </BreadCrumbs>
   </div>
@@ -25,7 +25,7 @@ import BreadCrumbs from "../components/BreadCrumbs.astro";
       <KontaktIcons svgPath="/icons/email_s.svg" overskrift="Email" info="hun10@balbonet.dk" />
       <OpenHours svgPath="/icons/clock_s.svg" overskrift="Åbningstider efter aftale" monThur="Man-Tors" monThurTimes="08:00 - 16:00" fri="Fre" friTimes="08:00 - 15:00" weekend="Lør-Søn" weekendTimes="Lukket" />
     </div>
-    <div class="img_cont"><img src="/img/kontakt.jpg" alt="img" /></div>
+    <div class="img_cont"><img src="img/kontakt.webp" alt="img" /></div>
   </div>
   <BookAftale />
 </MainLayout>
@@ -34,16 +34,22 @@ import BreadCrumbs from "../components/BreadCrumbs.astro";
   .img_cont {
     padding: 3% 0;
   }
+  .bc {
+    display: none;
+  }
   @media screen and (min-width: 800px) {
     .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      margin: 0 10%;
+      /* margin: 0 0%; */
+      gap: var(--spacing_12);
     }
 
     .img_cont {
-      margin-top: 4%;
-      margin-left: 13%;
+      width: 100%;
+      height: auto;
+      max-width: 600px;
+      min-width: 200px;
     }
     .bc {
       display: inline-flex;

@@ -3,17 +3,8 @@ const { link } = Astro.props;
 ---
 
 <div class="bc_container">
-  <a class="bc h5" href={link}> <slot /></a>
+  <a class="bc h5 hover" href={link}> <slot /></a>
 </div>
-
-<!-- <div class="bc">
-  <BreadCrumbs link="/#">
-    <span class="hover">{page1}</span>&nbsp;/&nbsp;
-  </BreadCrumbs>
-  <BreadCrumbs link="/kontakt">
-    <span class="underline">{page2}</span>
-  </BreadCrumbs>
-</div> -->
 
 <style>
   .bc {
@@ -26,23 +17,5 @@ const { link } = Astro.props;
   }
 
   @media (max-width: 800px) {
-    .bc {
-    }
-    .bc {
-      display: inline-flex;
-    }
-
-    .underline {
-      position: relative;
-    }
-
-    .underline::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      border-bottom: 1px solid var(--secondary_tekst);
-    }
   }
 </style>
