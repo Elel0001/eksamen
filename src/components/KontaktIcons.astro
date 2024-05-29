@@ -3,7 +3,7 @@ const { svgPath, overskrift, info, link } = Astro.props;
 ---
 
 <div class="container">
-  <div>
+  <div class="ikon">
     <img src={svgPath} alt="svg" />
   </div>
   <div>
@@ -45,5 +45,9 @@ const { svgPath, overskrift, info, link } = Astro.props;
   .link {
     color: var(--secondary_tekst);
     text-decoration: underline;
+  }
+
+  .ikon {
+    padding-right: var(--spacing_8);
   }
 </style>
