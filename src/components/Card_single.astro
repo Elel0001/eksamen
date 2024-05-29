@@ -207,11 +207,11 @@ console.log("kata props", Astro.props);
 
   prevButton.addEventListener("click", () => {
     const slideWidth = container.clientWidth;
-    container.scrollLeft -= slideWidth;
-    /* wrapper.scrollBy({
+    /* container.scrollLeft -= slideWidth;*/
+    container.scrollBy({
       left: slideWidth,
       behavior: "smooth",
-    });*/
+    });
   });
   nextButton.addEventListener("click", () => {
     const slideWidth = container.clientWidth;
