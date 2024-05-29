@@ -61,7 +61,7 @@ console.log("kata props", Astro.props);
   }
   .wrapper {
     display: flex;
-    overflow: auto;
+    overflow: hidden;
   }
   img {
     object-fit: cover;
@@ -70,7 +70,7 @@ console.log("kata props", Astro.props);
     position: relative;
     margin-top: 4.6rem;
   }
-
+  /*Chatgpt og hjælp fra tutor start - sat ind for at fjerne predefineret knap*/
   .naviButton {
     background: none;
     color: inherit;
@@ -80,22 +80,20 @@ console.log("kata props", Astro.props);
     cursor: pointer;
     outline: inherit;
   }
-
-  /*Chatgpt og hjælp fra tutor start */
+  /*Chatgpt og hjælp fra tutor slut */
 
   .prev {
     position: absolute;
     left: 6%;
-    top: 30%;
+    top: 45%;
   }
 
   .next {
     position: absolute;
     right: 6%;
-    top: 30%;
+    top: 45%;
   }
 
-  /*Chatgpt og hjælp fra tutor slut */
   /* 
   .carousel button {
     position: absolute;
@@ -149,6 +147,18 @@ console.log("kata props", Astro.props);
     }
     .column_text {
       max-width: 65ch;
+    }
+
+    .container {
+      width: 30rem;
+    }
+
+    .next {
+      top: 28%;
+    }
+
+    .prev {
+      top: 28%;
     }
 
     /*   .container_single {
@@ -207,11 +217,7 @@ console.log("kata props", Astro.props);
 
   prevButton.addEventListener("click", () => {
     const slideWidth = container.clientWidth;
-    /* container.scrollLeft -= slideWidth;*/
-    container.scrollBy({
-      left: slideWidth,
-      behavior: "smooth",
-    });
+    container.scrollLeft -= slideWidth;
   });
   nextButton.addEventListener("click", () => {
     const slideWidth = container.clientWidth;
