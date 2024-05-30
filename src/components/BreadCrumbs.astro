@@ -1,11 +1,13 @@
 ---
-const { link } = Astro.props;
+const { link, post } = Astro.props;
 ---
 
 <div class="bc_container">
   <a class="bc h5 hover" href={link}> <slot /></a>
+  <h1 class="h5">{post}</h1>
 </div>
 
+<!-- name={post.name} -->
 <style>
   .bc {
     text-decoration: none;

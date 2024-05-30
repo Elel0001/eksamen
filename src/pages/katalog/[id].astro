@@ -1,5 +1,4 @@
 ---
-
 export async function getStaticPaths() {
   // Fetcher data fra databasen og ligger i konstanten 'data'
   const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykker", {
@@ -27,11 +26,20 @@ import BreadCrumbs from "../../components/BreadCrumbs.astro";
 ---
 
 <MainLayout title="Produktside">
+  <div class="bc">
+    <BreadCrumbs link="/#">
+      <span class="hover">Hjem</span>&nbsp;/&nbsp;
+    </BreadCrumbs>
+    <BreadCrumbs link="/katalog">
+      <span class="hover">Katalog</span>&nbsp;/&nbsp;
+    </BreadCrumbs>
+    <BreadCrumbs link="/katalog" post={post.name} />
+  </div>
   <Card_single imgsingle={post.image} imgsingle2={post.image2} name={post.name} pris={post.price} texts1={post.material} texts2={post.size} texts3={post.description} texts4={post.varenummer} />
 </MainLayout>
 <style>
   @media (min-width: 800px) {
-      .bc {
+    .bc {
       display: inline-flex;
     }
 
@@ -64,6 +72,5 @@ import BreadCrumbs from "../../components/BreadCrumbs.astro";
     .hover:hover::after {
       width: 100%;
     }
-  }
   }
 </style>
