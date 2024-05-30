@@ -8,51 +8,6 @@ const { name, pris, texts1, texts2, texts3, texts4, imgsingle, imgsingle2 } = As
 console.log("kata props", Astro.props);
 ---
 
-<!-- <article>
-  <div class="container">
-    <div class="wrapper">
-      <img src=`/img/produkter/${imgsingle}` alt="" />
-      <img src=`/img/produkter/${imgsingle2}` alt="" />
-    </div>
-    <button aria-label="pil" class="naviButton prev"
-      ><svg width="14" height="30" viewBox="0 0 14 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M0.33064 14.0654L12.2111 0.356523C12.4093 0.127667 12.6727 0 12.9465 0C13.2204 0 13.4838 0.127667 13.682 0.356523L13.6948 0.372013C13.7912 0.482958 13.868 0.6165 13.9205 0.764518C13.9729 0.912535 14 1.07193 14 1.23301C14 1.3941 13.9729 1.55349 13.9205 1.70151C13.868 1.84953 13.7912 1.98307 13.6948 2.09402L2.50719 15.0026L13.6948 27.906C13.7912 28.0169 13.868 28.1505 13.9205 28.2985C13.9729 28.4465 14 28.6059 14 28.767C14 28.9281 13.9729 29.0875 13.9205 29.2355C13.868 29.3835 13.7912 29.517 13.6948 29.628L13.682 29.6435C13.4838 29.8723 13.2204 30 12.9465 30C12.6727 30 12.4093 29.8723 12.2111 29.6435L0.33064 15.9346C0.226157 15.814 0.142976 15.669 0.0861413 15.5084C0.0293064 15.3477 0 15.1748 0 15C0 14.8252 0.0293064 14.6523 0.0861413 14.4916C0.142976 14.331 0.226157 14.186 0.33064 14.0654Z"
-          fill="#C59F73"></path>
-      </svg></button
-    >
-    <button aria-label="pil" class="naviButton next"
-      ><svg width="14" height="30" viewBox="0 0 14 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M13.6694 15.9346L1.78894 29.6435C1.59071 29.8723 1.32734 30 1.05347 30C0.779602 30 0.516241 29.8723 0.31801 29.6435L0.305217 29.628C0.208786 29.517 0.131999 29.3835 0.0795281 29.2355C0.0270569 29.0875 2.38419e-07 28.9281 2.38419e-07 28.767C2.38419e-07 28.6059 0.0270569 28.4465 0.0795281 28.2985C0.131999 28.1505 0.208786 28.0169 0.305217 27.906L11.4928 14.9974L0.305217 2.09402C0.208786 1.98307 0.131999 1.84953 0.0795281 1.70151C0.0270569 1.55349 2.38419e-07 1.3941 2.38419e-07 1.23302C2.38419e-07 1.07193 0.0270569 0.912537 0.0795281 0.764519C0.131999 0.616502 0.208786 0.482959 0.305217 0.372014L0.31801 0.356524C0.516241 0.127668 0.779602 -7.15256e-07 1.05347 -7.15256e-07C1.32734 -7.15256e-07 1.59071 0.127668 1.78894 0.356524L13.6694 14.0654C13.7738 14.186 13.857 14.331 13.9139 14.4916C13.9707 14.6523 14 14.8252 14 15C14 15.1748 13.9707 15.3477 13.9139 15.5084C13.857 15.669 13.7738 15.814 13.6694 15.9346Z"
-          fill="#C59F73"></path>
-      </svg></button
-    >
-  </div>
-
-  <div class="column_text">
-    <div class="h1">
-      <OverskriftWithUnderline overskrift={name} />
-    </div>
-
-    <h2 class="h3">{pris} kr.</h2>
-
-    <p>{texts1}</p>
-    <p>{texts2}</p>
-    <p>{texts3}</p>
-    <p>Varenummer: {texts4}</p>
-    <div class="botton_single">
-      <div class="button"><Button link={`/kontakt/`} size="large">Book en aftale</Button></div>
-    </div>
-
-    <div class="del">
-      <div class="del_ikon">
-        <img src="/icons/del_desk.svg" alt="Del knap" />
-      </div>
-      <p class="del_text">Del</p>
-    </div>
-  </div>
-</article> -->
 <article>
   <div class="container">
     <button aria-label="pil" class="naviButton prev">
@@ -112,115 +67,13 @@ console.log("kata props", Astro.props);
     object-fit: cover;
   }
   .container {
-    /* position: relative;
-    margin-top: 4.6rem; */
-
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 4.6rem;
+    justify-content: center;
   }
+
   /*Chatgpt og hjælp fra tutor start - sat ind for at fjerne predefineret knap*/
-  .naviButton {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-  }
-  /*Chatgpt og hjælp fra tutor slut */
-
-  /* .prev {
-    position: absolute;
-    left: 6%;
-    top: 45%;
-  }
-
-  .next {
-    position: absolute;
-    right: 6%;
-    top: 45%;
-  } */
-
-  .botton_single {
-    margin-bottom: var(--spacing_6);
-  }
-  .del_ikon {
-    width: 80%;
-    text-align: left;
-  }
-  .del {
-    display: grid;
-    grid-template-columns: 1fr 10fr;
-    gap: var(--spacing_1);
-    margin-bottom: var(--spacing_6);
-  }
-
-  .del_text {
-    margin-top: var(--spacing_3);
-  }
-  p {
-    margin-bottom: var(--spacing_4);
-  }
-
-  .h1 {
-    margin-top: var(--spacing_4);
-  }
-  .h3 {
-    margin-bottom: var(--spacing_7);
-    margin-top: -1.6rem;
-  }
-
-  @media (min-width: 800px) {
-    .h1 {
-      margin-top: var(--spacing_10);
-    }
-
-    article {
-      grid-template-columns: 2fr 2fr;
-    }
-    .column_text {
-      max-width: 65ch;
-    }
-
-    .container {
-      width: 34rem;
-    }
-
-    /* .next {
-      top: 28%;
-    }
-
-    .prev {
-      top: 28%;
-    } */
-  }
-
-  /* <khgkgkgkgkjgkjgkjgkjgkj> */
-
-  article {
-    display: grid;
-    gap: 55px;
-  }
-
-  .wrapper {
-    display: flex;
-    overflow: hidden;
-  }
-
-  img {
-    object-fit: cover;
-  }
-
-  .container {
-    position: relative; /* Added */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the images */
-    margin-top: 4.6rem;
-  }
 
   .naviButton {
     background: none;
@@ -234,13 +87,14 @@ console.log("kata props", Astro.props);
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Adjust for proper vertical centering */
   }
+  /*Chatgpt og hjælp fra tutor slut */
 
   .prev {
-    left: 10px; /* Position inside on the left */
+    left: 10px;
   }
 
   .next {
-    right: 10px; /* Position inside on the right */
+    right: 10px;
   }
 
   .botton_single {
@@ -273,14 +127,9 @@ console.log("kata props", Astro.props);
 
   .h3 {
     margin-bottom: var(--spacing_7);
-    margin-top: -1.6rem;
   }
 
   @media (min-width: 800px) {
-    .h1 {
-      margin-top: var(--spacing_10);
-    }
-
     article {
       grid-template-columns: 2fr 2fr;
     }
