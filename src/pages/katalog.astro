@@ -6,7 +6,15 @@ import MainLayout from "../layout/MainLayout.astro";
 import "../styles/katalog.css";
 import BreadCrumbs from "../components/BreadCrumbs.astro";
 // Fetcher data fra databasen og ligger i konstanten 'data'
-const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykker", {
+// const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykker", {
+//   method: "GET",
+//   headers: {
+//     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzYnlraG5uam5oaXZ2dmJnamppIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU2Nzg3NzEsImV4cCI6MjAzMTI1NDc3MX0.sOle6ArblP4c9-jM5N5RYUlWTOaJ4okr005pwOkyil8",
+//   },
+// }).then((res) => res.json());
+
+const data = await fetch("https://jsbykhnnjnhivvvbgjji.supabase.co/rest/v1/Smykker?order=created_at.asc", {
+  // Added ?order=created_at.desc
   method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzYnlraG5uam5oaXZ2dmJnamppIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU2Nzg3NzEsImV4cCI6MjAzMTI1NDc3MX0.sOle6ArblP4c9-jM5N5RYUlWTOaJ4okr005pwOkyil8",
