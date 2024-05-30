@@ -42,7 +42,7 @@ console.log("kata props", Astro.props);
     <p>{texts3}</p>
     <p>Varenummer: {texts4}</p>
     <div class="botton_single">
-      <Button size="large">Book en aftale</Button>
+      <div class="button"><Button link={`/kontakt/`} size="large">Book en aftale</Button></div>
     </div>
 
     <div class="del">
@@ -129,7 +129,7 @@ console.log("kata props", Astro.props);
     }
 
     article {
-      grid-template-columns: 2fr 3fr;
+      grid-template-columns: 2fr 2fr;
     }
     .column_text {
       max-width: 65ch;
