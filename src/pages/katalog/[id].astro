@@ -26,18 +26,7 @@ import Card_single from "../../components/Card_single.astro";
 import BreadCrumbs from "../../components/BreadCrumbs.astro";
 ---
 
-<MainLayout>
-  <div class="bc">
-    <BreadCrumbs link="/#">
-      <span class="hover">Hjem</span>&nbsp;/&nbsp;
-    </BreadCrumbs>
-    <BreadCrumbs link="/katalog">
-      <span class="hover">Katalog</span>&nbsp;/&nbsp;
-    </BreadCrumbs>
-        <BreadCrumbs link="/katalog">
-      <span class="underline">Ring</span>
-    </BreadCrumbs>
-  </div>
+<MainLayout title="Produktside">
   <Card_single imgsingle={post.image} imgsingle2={post.image2} name={post.name} pris={post.price} texts1={post.material} texts2={post.size} texts3={post.description} texts4={post.varenummer} />
 </MainLayout>
 <style>
