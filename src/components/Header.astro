@@ -11,7 +11,7 @@ import "../styles/general.css";
   <input type="checkbox" id="toggle" class="toggle-checkbox" />
   <label for="toggle" class="close-menu">&#10005;</label>
   <hr class="horizontal-line" />
-  <nav class="menu">
+  <!-- <nav class="menu">
     <a href="/" class="menu-item">Hjem</a>
     <span class="separator"></span>
     <a href="/katalog" class="menu-item">Katalog</a>
@@ -21,7 +21,20 @@ import "../styles/general.css";
     <a href="/om" class="menu-item">Om</a>
     <span class="separator"></span>
     <a href="/kontakt" class="menu-item">Kontakt</a>
+  </nav> -->
+
+  <nav class="menu">
+    <a href="/" class="menu-item" id="home">Hjem</a>
+    <span class="separator"></span>
+    <a href="/katalog" class="menu-item" id="catalog">Katalog</a>
+    <span class="separator"></span>
+    <a href="/services" class="menu-item" id="services">Ydelser</a>
+    <span class="separator"></span>
+    <a href="/om" class="menu-item" id="about">Om</a>
+    <span class="separator"></span>
+    <a href="/kontakt" class="menu-item" id="contact">Kontakt</a>
   </nav>
+
   <div class="overlay">
     <nav class="overlay-menu">
       <a href="/" class="menu-item">Hjem</a>
@@ -88,6 +101,10 @@ import "../styles/general.css";
     font-weight: bold;
   }
 
+  .menu-item.active {
+    color: var(--secondary_gold);
+    font-weight: bold;
+  }
   .burger-menu {
     font-size: 30px;
     cursor: pointer;
@@ -198,3 +215,21 @@ import "../styles/general.css";
     }
   }
 </style>
+<script>
+  // Function to set the active class on the current menu item
+  function setActiveMenuItem() {
+    const menuItems = document.querySelectorAll(".menu-item");
+    menuItems.forEach((item) => {
+      // Remove active class from all menu items
+      item.classList.remove("active");
+
+      // Add active class to the clicked menu item
+      if (item.href === window.location.href) {
+        item.classList.add("active");
+      }
+    });
+  }
+
+  // Set active menu item on page load
+  document.addEventListener("DOMContentLoaded", setActiveMenuItem);
+</script>
