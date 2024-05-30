@@ -3,6 +3,7 @@ import Accordion from "./Accordion.astro";
 ---
 
 <section class="accordion_list">
+  <h1 class="h4">Filtrer</h1>
   <form>
     <Accordion title="Type">
       <ul>
@@ -74,7 +75,7 @@ import Accordion from "./Accordion.astro";
 </script>
 <style>
   .accordion_list {
-    background-color: white;
+    background-color: var(--primary_felter);
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -121,6 +122,11 @@ import Accordion from "./Accordion.astro";
     margin-left: 0.3rem;
   }
 
+  .h4 {
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+  }
+
   @media (min-width: 800px) {
     .accordion_list {
       align-self: flex-start;
@@ -128,6 +134,9 @@ import Accordion from "./Accordion.astro";
       margin-right: 2rem;
       position: sticky;
       top: 2rem;
+    }
+    .h4 {
+      margin: 0.5rem 0 0 1rem;
     }
   }
 </style>
