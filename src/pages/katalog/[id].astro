@@ -38,6 +38,9 @@ import BreadCrumbs from "../../components/BreadCrumbs.astro";
   <Card_single imgsingle={post.image} imgsingle2={post.image2} name={post.name} pris={post.price} texts1={post.material} texts2={post.size} texts3={post.description} texts4={post.varenummer} />
 </MainLayout>
 <style>
+  .bc {
+    display: none;
+  }
   @media (min-width: 800px) {
     .bc {
       display: inline-flex;
